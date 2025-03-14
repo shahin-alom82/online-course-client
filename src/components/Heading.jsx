@@ -14,7 +14,7 @@ const Heading = () => {
       ]
       return (
             <div>
-                  <div className={"flex items-center justify-between  py-4 px-5 lg:max-w-screen-xl mx-auto"}>
+                  <div className={"flex items-center justify-between  py-4 px-5 lg:max-w-screen-xl mx-auto sticky lg:fixed top-0 left-0 right-0 z-10 opacity-70"}>
                         {/* bg-gradient-to-r from-[#24cef0] to-[#60e2d8] */}
                         {/* Logo */}
                         <div>
