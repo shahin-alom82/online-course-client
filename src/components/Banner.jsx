@@ -7,8 +7,8 @@ const Banner = () => {
       return (
             <div>
                   <Container className={"banner-bg-img"}>
-                        <img src={img} alt="img" className='lg:h-[600px] pt-16 lg:ml-[750px] relative' />
-                        <div className='absolute ml-28 top-48'>
+                        <img src={img} alt="img" className='lg:h-[648px] pt-16 lg:ml-[750px] relative' />
+                        <div className='absolute ml-28 top-48 hidden md:block'>
                               <div className='font-semibold text-gray-800  text-5xl uppercase  space-y-4' >
                                     <h1>Hero-Shape-1 Get<span className='text-[#ee4a62] font-bold'> 2500+</span></h1>
                                     <h1>Best Online Courses</h1>
