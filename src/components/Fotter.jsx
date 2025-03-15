@@ -1,20 +1,20 @@
 import React from 'react';
 import Container from '../components/Container'
 import logo from '../assets/logo.png'
-import { FaArrowRightLong, FaFacebook, FaTwitter, FaYoutube } from 'react-icons/fa6';
+import { FaArrowRightLong, FaTwitter, FaYoutube } from 'react-icons/fa6';
 import { FaFacebookSquare, FaInstagramSquare } from 'react-icons/fa';
 const Fotter = () => {
       return (
             <div>
-                  <Container className={"bg-[#efefef] py-10"}>
+                  <Container className={"bg-[#efefef] py-10 mt-10"}>
                         <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center mt-10 gap-6 lg:px-16 text-gray-800"}>
                               <div>
                                     <img src={logo} alt="logo" />
                                     <div className='mt-4'>
-                                          <p>EduBlink is a modern, feature-rich online learning platform designed for interactive and engaging education.</p>
+                                          <p className='tracking-wide'>EduBlink is a modern, feature-rich online learning platform designed for interactive and engaging education.</p>
                                           <div className='mt-2'>
-                                                <p>Address : Assim Fulbaria, Mymensingh</p>
-                                                <p>Mobile : 01682247291</p>
+                                                <p>Address : Assim, Fulbaria, Mymensingh</p>
+                                                <p className='mt-1'>Mobile : 01682247291</p>
                                           </div>
                                     </div>
                               </div>
@@ -59,7 +59,7 @@ const Fotter = () => {
                                     </div>
                               </div>
                         </div>
-                        <p className='lg:text-center lg:mt-24 mt-10 text-gray-900 tracking-wide text-sm'>Copyright 2025 <span className='text-[#23b792]'>EduBlink</span> | Developed By <span className='text-[#23b792]'>DevsBlink.</span> All Rights Reserved</p>
+                        <p className='lg:text-center lg:mt-20 mt-10 text-gray-900 tracking-wide text-sm'>Copyright 2025 <span className='text-[#23b792]'>EduBlink</span> | Developed By <span className='text-[#23b792]'>Shahin.</span> All Rights Reserved</p>
                   </Container>
             </div>
       );
