@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Container from './Container';
 import logo from '../assets/logo.png'
 import { LuLogIn } from 'react-icons/lu';
 import { IoClose } from 'react-icons/io5';
