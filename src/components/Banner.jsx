@@ -9,7 +9,7 @@ const Banner = () => {
                   <Container className={"banner-bg-img"}>
                         <img src={img} alt="img" className='lg:h-[648px] pt-16 lg:ml-[730px] md:ml-80 relative' />
                         <div className='absolute lg:ml-28 md:ml-10 top-48 hidden md:block'>
-                              <div className='font-semibold text-gray-800  lg:text-5xl text-2xl uppercase  space-y-4' >
+                              <div className='font-semibold text-gray-800  lg:text-5xl text-2xl uppercase space-y-4' >
                                     <h1>Hero-Shape-1 Get<span className='text-[#ee4a62] font-bold'> 2500+</span></h1>
                                     <h1>Best Online Courses</h1>
                                     <h1>From EduBlink</h1>

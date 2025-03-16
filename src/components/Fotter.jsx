@@ -11,7 +11,7 @@ const Fotter = () => {
                               <div>
                                     <img src={logo} alt="logo" />
                                     <div className='mt-4'>
-                                          <p className='tracking-wide'>EduBlink is a modern, feature-rich online learning platform designed for interactive and engaging education.</p>
+                                          <p className='tracking-wide'>EduBlink is a modern, feature-rich online learning platform education.</p>
                                           <div className='mt-2'>
                                                 <p>Address : Assim, Fulbaria, Mymensingh</p>
                                                 <p className='mt-1'>Mobile : 01682247291</p>

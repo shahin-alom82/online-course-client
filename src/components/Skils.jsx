@@ -13,7 +13,7 @@ const Skils = () => {
                               <img src={aboutimg} alt="img" className='h-[450px] rounded-lg' />
                               <div>
                                     <p className='text-gray-800'>About Us</p>
-                                    <div className='lg:text-5xl text-xl font-semibold mt-2 font'>
+                                    <div className='lg:text-5xl text-xl font-semibold mt-2 font text-gray-800 '>
                                           <h1>Learn & Grow Your Skills</h1>
                                           <h1 className='mt-4'>From <span className='text-[#ee4a62]'>Anywhere</span></h1>
                                     </div>
