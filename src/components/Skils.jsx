@@ -5,6 +5,7 @@ import aboutimg from '../assets/about2.webp'
 import aboutimg3 from '../assets/about3.jpg'
 import { GiCheckMark } from 'react-icons/gi';
 import { LiaAwardSolid } from 'react-icons/lia';
+import { FaPlus } from 'react-icons/fa6';
 const Skils = () => {
       return (
             <div className='mt-20 lg:mx-52'>
@@ -24,8 +25,10 @@ const Skils = () => {
                                           <h1 className='flex items-center gap-4 tracking-wide'><GiCheckMark className='text-yellow-500' size={20} /> Lifetime Access</h1>
                                     </div>
                               </div>
-                              <div className='lg:flex items-center gap-5 absolute bg-white ease-initial py-4 px-4 -bottom-8 left-64 shadow-xl shadow-[#cbece3] rounded-lg md:hidden md:block'>
-                                    <span className='bg-[#e8f8f5] py-2 px-2 rounded-full'><LiaAwardSolid size={40} className='text-[#23b792]' /></span>
+                              <div className='hidden lg:flex items-center gap-5 absolute bg-white ease-initial py-4 px-4 -bottom-8 left-64 shadow-xl shadow-[#cbece3] rounded-lg'>
+                                    <span className='bg-[#e8f8f5] py-2 px-2 rounded-full'>
+                                          <LiaAwardSolid size={40} className='text-[#23b792]' />
+                                    </span>
                                     <div>
                                           <h1 className='text-[#23b792] text-xl'>29+</h1>
                                           <h1 className='tracking-wide text-gray-800'>Wonderful Awards</h1>

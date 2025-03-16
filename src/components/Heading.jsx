@@ -7,7 +7,7 @@ const Heading = () => {
       const nav = [
             { title: "Home", path: "/" },
             { title: "Course", path: "/course" },
-            { title: "About", path: "/about" },
+            // { title: "About", path: "/about" },
             { title: "Contact", path: "/contact" },
             { title: "Dashboard", path: "/bashboard" },
       ]
