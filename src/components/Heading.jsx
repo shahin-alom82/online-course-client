@@ -22,7 +22,7 @@ const Heading = () => {
                               </Link>
                         </div>
                         {/* Nav item */}
-                        <div className='lg:flex items-center gap-x-10 hidden md:block'>
+                        <div className='md:flex  items-center gap-x-10 hidden md:block'>
                               {
                                     nav.map((item, index) => (
                                           <div key={index}>
@@ -35,7 +35,7 @@ const Heading = () => {
                         </div>
                         {/* Login Button */}
                         <div className='hidden md:block'>
-                              <button className='bg-[#23b792] py-2 px-4 flex items-center gap-1 text-[18px] text-white'>Login <LuLogIn />
+                              <button className='bg-[#23b792] py-1.5 px-3 flex items-center gap-1 text-[18px] text-white'>Login <LuLogIn />
                               </button>
                         </div>
                         {/* Mobile Menu */}
