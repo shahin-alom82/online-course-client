@@ -26,3 +26,7 @@ body {
 .animate-borderFade {
   animation: borderFade 4s ease-in-out infinite alternate;
 }
+.font{
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+/* Arial, Helvetica, sans-serif; */
