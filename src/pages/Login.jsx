@@ -8,7 +8,13 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 const Login = () => {
       const [showPassword, setShowPassword] = useState(false);
 
-
+      const handleLogin = async e => {
+            e.preventDefault()
+            const form = e.target;
+            const email = form.email.value;
+            const password = form.password.value;
+            console.log('login', email, password)
+      }
 
 
 
@@ -17,7 +23,7 @@ const Login = () => {
                   <Container className="login-container">
                         <h2 className="text-center text-3xl font-bold text-gray-800 font">Login Now</h2>
 
-                        <form className="mt-6 space-y-5">
+                        <form onSubmit={handleLogin} className="mt-6 space-y-5">
 
                               {/* Email Address */}
                               <div>
@@ -29,7 +35,7 @@ const Login = () => {
                                           name="email"
                                           type="email"
                                           required
-                                          className="mt-2 block w-full rounded-lg border border-gray-300 py-2 px-4 outline-none"
+                                          className="mt-2 block w-full rounded-lg border border-gray-300 py-2 px-4 outline-none placeholder:text-gray-600"
                                     />
                               </div>
 
@@ -43,7 +49,7 @@ const Login = () => {
                                           name="password"
                                           type={showPassword ? "text" : "password"}
                                           required
-                                          className="mt-2 block w-full rounded-lg border border-gray-300 py-2 px-4 outline-none"
+                                          className="mt-2 block w-full rounded-lg border border-gray-300 py-2 px-4 outline-none placeholder:text-gray-600"
                                     />
                                     <button
                                           type="button"
@@ -62,6 +68,7 @@ const Login = () => {
                               <Link to="/register" className="text-[#23b792]">
                                     Register now
                               </Link>
+                              {/* Already had an account? */}
                         </p>
                   </Container>
             </div>
