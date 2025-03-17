@@ -24,7 +24,7 @@ body {
 }
 
 .animate-borderFade {
-  animation: borderFade 4s ease-in-out infinite alternate;
+  animation: borderFade 2s ease-in-out infinite alternate;
 }
 
 .font {
@@ -33,6 +33,3 @@ body {
 .banner {
   font-family: Verdana, Geneva, Tahoma, sans-serif
 }
-/* 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif */
-
-/* Arial, Helvetica, sans-serif; */

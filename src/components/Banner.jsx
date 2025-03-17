@@ -12,7 +12,7 @@ const Banner = () => {
                         <img src={img} alt="img" className='lg:h-[648px] pt-16 lg:ml-[730px] md:ml-80 relative' />
                         <div className='absolute  lg:ml-28 md:ml-10 top-48 hidden md:block'>
                               <div className='font-semibold text-gray-800  lg:text-5xl text-2xl uppercase space-y-4 banner' >
-                                    <h1>Hero-Shape-1 Get<span className='text-[#ee4a62] font-semibold'> 2500+</span></h1>
+                                    <h1>Get<span className='text-[#ee4a62] font-semibold'> 2500+</span></h1>
                                     <h1>Best Online Courses</h1>
                                     <h1>From EduBlink</h1>
                               </div>
@@ -20,7 +20,7 @@ const Banner = () => {
                               </p>
                               <button className='flex items-center gap-2 bg-[#23b792] py-2 px-4 text-white mt-6'>Find Course <FaArrowRightLong /></button>
                         </div>
-                        <div className='bg-amber-100 py-4 hidden md:block px-6 absolute top-[480px] right-80 rounded-md'>
+                        <div className='bg-white py-4 hidden md:block px-6 absolute top-[480px] right-80 rounded-md'>
                               <h1 className='text-xl'>Instrunctor</h1>
                               <div className="flex items-center gap-4 mt-2">
 
