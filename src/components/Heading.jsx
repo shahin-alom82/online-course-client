@@ -35,10 +35,12 @@ const Heading = () => {
                               }
                         </div>
                         {/* Login Button */}
-                        <div className='hidden md:block'>
-                              <button className='bg-[#23b792] py-1.5 px-3 flex items-center gap-1 text-[18px] text-white'>Login <LuLogIn />
-                              </button>
-                        </div>
+                        <Link to={"/login"}>
+                              <div className='hidden md:block'>
+                                    <button className='bg-[#23b792] py-1.5 px-3 flex items-center gap-1 text-[18px] text-white'>Login <LuLogIn />
+                                    </button>
+                              </div>
+                        </Link>
                         {/* Mobile Menu */}
                         <div className='md:hidden block'>
                               <IoClose size={30} />

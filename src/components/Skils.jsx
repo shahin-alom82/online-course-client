@@ -11,7 +11,7 @@ const Skils = () => {
             <div className='mt-20 lg:mx-52'>
                   <Container>
                         <div className='flex flex-col lg:flex-row justify-between gap-10 relative'>
-                              <img src={aboutimg} alt="img" className='h-[450px] rounded-lg' />
+                              <img src={aboutimg} alt="img" className='lg:h-[450px] rounded-lg' />
                               <div>
                                     <p className='text-gray-800'>About Us</p>
                                     <div className='lg:text-5xl text-xl font-semibold mt-2 font text-gray-800 '>

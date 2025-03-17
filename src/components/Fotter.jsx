@@ -63,7 +63,7 @@ const Fotter = () => {
                               </div>
                         </Container>
                   </div>
-                  <p className='lg:text-center py-10 text-gray-900 px-2 bg-[#ebeff0] tracking-wide text-sm'>Copyright 2025 <span className='text-[#23b792]'>EduBlink</span> | Developed By <span className='text-[#23b792]'>Shahin.</span> All Rights Reserved</p>
+                  <p className='lg:text-center py-10 text-gray-900 px-4 bg-[#ebeff0] tracking-wide text-sm'>Copyright 2025 <span className='text-[#23b792]'>EduBlink</span> | Developed By <span className='text-[#23b792]'>Shahin.</span> All Rights Reserved</p>
             </div>
       );
 };

@@ -30,5 +30,9 @@ body {
 .font {
   font-family: cursive
 }
+.banner {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+/* 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif */
 
 /* Arial, Helvetica, sans-serif; */
