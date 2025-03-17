@@ -24,16 +24,17 @@ const Skils = () => {
                                           <h1 className='flex items-center gap-4 tracking-wide'><GiCheckMark className='text-yellow-500' size={20} /> Online Remote Learning</h1>
                                           <h1 className='flex items-center gap-4 tracking-wide'><GiCheckMark className='text-yellow-500' size={20} /> Lifetime Access</h1>
                                     </div>
-                              </div>
-                              <div className='hidden lg:flex items-center gap-5 absolute bg-white ease-initial py-4 px-4 -bottom-8 left-64 shadow-xl shadow-[#cbece3] rounded-lg'>
-                                    <span className='bg-[#e8f8f5] py-2 px-2 rounded-full'>
-                                          <LiaAwardSolid size={40} className='text-[#23b792]' />
-                                    </span>
-                                    <div>
-                                          <h1 className='text-[#23b792] text-xl'>29+</h1>
-                                          <h1 className='tracking-wide text-gray-800'>Wonderful Awards</h1>
+                                    <div className='flex items-center gap-5  mt-8'>
+                                          <span className='bg-[#e8f8f5] py-2 px-2 rounded-full'>
+                                                <LiaAwardSolid size={40} className='text-[#23b792]' />
+                                          </span>
+                                          <div>
+                                                <h1 className='text-[#23b792] text-xl'>29+</h1>
+                                                <h1 className='tracking-wide text-gray-800'>Wonderful Awards</h1>
+                                          </div>
                                     </div>
                               </div>
+
                         </div>
                   </Container>
             </div>
