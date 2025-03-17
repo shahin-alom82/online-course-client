@@ -17,6 +17,7 @@ const Register = () => {
             const name = form.name.value;
             const image = form.image.files[0];
             console.log('login', email, password, name, image)
+            form.reset();
       }
 
 
@@ -93,9 +94,9 @@ const Register = () => {
                         </form>
 
                         <p className="mt-6 text-center text-sm text-gray-500 tracking-wide">
-                              Already had an account? ?
+                              Already had an account ?
                               <Link to="/login" className="text-[#23b792]">
-                                    Register now
+                                    Login now
                               </Link>
                         </p>
                   </Container>
