@@ -1,13 +1,16 @@
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import "../pages/login.css";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-// import gif from '../assets/register.gif'
+import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
       const [showPassword, setShowPassword] = useState(false);
+      const { createUser } = useContext(AuthContext)
+
 
       const handleRegister = async e => {
             e.preventDefault()
@@ -16,8 +19,20 @@ const Register = () => {
             const password = form.password.value;
             const name = form.name.value;
             const image = form.image.files[0];
-            console.log('login', email, password, name, image)
-            form.reset();
+            // console.log('login', email, password, name, image)
+
+            try {
+                  await createUser(email, password)
+                  form.reset();
+                  toast.success('Register Successfully!')
+            } catch (error) {
+                  toast.error('Register Error !')
+            }
+
+
+
+
+
       }
 
 
