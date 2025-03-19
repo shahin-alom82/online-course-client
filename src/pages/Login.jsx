@@ -1,20 +1,35 @@
 
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Container from "../components/Container";
 import "../pages/login.css";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import toast from "react-hot-toast";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
       const [showPassword, setShowPassword] = useState(false);
-
+      const { loginUser } = useContext(AuthContext)
+      const navigate = useNavigate()
       const handleLogin = async e => {
             e.preventDefault()
             const form = e.target;
             const email = form.email.value;
             const password = form.password.value;
-            console.log('login', email, password)
-            form.reset();
+            // console.log('login', email, password)
+
+            try {
+                  await loginUser(email, password)
+                  toast.success('Login Successfully!')
+                  form.reset();
+                  navigate('/')
+            } catch (error) {
+                  toast.error('Login Error !')
+            }
+
+
+
+
       }
 
 

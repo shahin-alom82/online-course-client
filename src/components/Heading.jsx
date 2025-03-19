@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png'
 import { LuLogIn } from 'react-icons/lu';
 import { IoClose } from 'react-icons/io5';
+import { AuthContext } from '../provider/AuthProvider';
+import toast from "react-hot-toast";
+import useRole from '../hocks/useRole';
+
 const Heading = () => {
+
+      const { user, logOut } = useContext(AuthContext)
+      const [role] = useRole()
       const nav = [
             { title: "Home", path: "/" },
             { title: "Course", path: "/course" },
-            // { title: "About", path: "/about" },
             { title: "Contact", path: "/contact" },
-            { title: "Dashboard", path: "/bashboard" },
+            { title: "blog", path: "/Blog" },
       ]
+
+      if (user) {
+            if (role === "admin") {
+                  nav.push({ title: "Dashboard", path: "/dashboard/adminhome" });
+            } else {
+                  nav.push({ title: "Dashboard", path: "/dashboard/userhome" });
+            }
+      }
+      const handleLogout = async () => {
+            try {
+                  await logOut()
+                  toast.success('Logout Successfully!')
+            } catch (error) {
+                  toast.error('Logout Error!')
+            }
+      }
+
       return (
             <div>
                   <div className={"flex items-center justify-between  py-4 lg:max-w-screen-xl mx-auto "}>
@@ -35,12 +58,21 @@ const Heading = () => {
                               }
                         </div>
                         {/* Login Button */}
-                        <NavLink to={"/login"}>
-                              <div className='hidden md:block'>
-                                    <button className='bg-[#23b792] py-1.5 px-3 flex items-center gap-1 text-[18px] text-white'>Login <LuLogIn />
-                                    </button>
-                              </div>
-                        </NavLink>
+                        {
+                              user ? (
+                                    <div onClick={() => handleLogout()} className='hidden md:block'>
+                                          <button className='bg-red-400 py-1.5 px-3 flex items-center gap-1 text-[18px] text-white'>Logout <LuLogIn />
+                                          </button>
+                                    </div>
+                              ) : (
+                                    <NavLink to={"/login"}>
+                                          <div className='hidden md:block'>
+                                                <button className='bg-[#23b792] py-1.5 px-3 flex items-center gap-1 text-[18px] text-white'>Login <LuLogIn />
+                                                </button>
+                                          </div>
+                                    </NavLink>
+                              )
+                        }
                         {/* Mobile Menu */}
                         <div className='md:hidden block'>
                               <IoClose size={30} />

@@ -1,39 +1,42 @@
 
+
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Container from "../components/Container";
 import "../pages/login.css";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import axios from 'axios';
+
 
 const Register = () => {
       const [showPassword, setShowPassword] = useState(false);
-      const { createUser } = useContext(AuthContext)
-
+      const { createUser, updateUserProfile } = useContext(AuthContext)
+      const navigate = useNavigate()
 
       const handleRegister = async e => {
-            e.preventDefault()
+            e.preventDefault();
             const form = e.target;
             const email = form.email.value;
             const password = form.password.value;
             const name = form.name.value;
             const image = form.image.files[0];
-            // console.log('login', email, password, name, image)
+            const formData = new FormData();
+            formData.append('image', image);
 
             try {
-                  await createUser(email, password)
+                  const { data } = await axios.post(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMGBB_API}`, formData);
+                  const imageUrl = data.data.display_url;
+                  await createUser(email, password);
+                  updateUserProfile(name, imageUrl);
                   form.reset();
+                  navigate('/')
                   toast.success('Register Successfully!')
             } catch (error) {
                   toast.error('Register Error !')
-            }
-
-
-
-
-
-      }
+            };
+      };
 
 
 
@@ -109,7 +112,7 @@ const Register = () => {
                         </form>
 
                         <p className="mt-6 text-center text-sm text-gray-500 tracking-wide">
-                              Already had an account ?
+                              Already have an account ?
                               <Link to="/login" className="text-[#23b792]">
                                     Login now
                               </Link>
