@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import React from "react";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Course from "../pages/Course/Course";
 export const route = createBrowserRouter([
       {
             path: "/",
@@ -20,6 +21,10 @@ export const route = createBrowserRouter([
                   {
                         path: "/register",
                         element: <Register />
+                  },
+                  {
+                        path: "/course",
+                        element: <Course />
                   }
             ]
       }

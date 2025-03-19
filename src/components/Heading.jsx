@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png'
 import { LuLogIn } from 'react-icons/lu';
 import { IoClose } from 'react-icons/io5';
@@ -13,9 +13,9 @@ const Heading = () => {
       ]
       return (
             <div>
-                  <div className={"flex items-center justify-between  py-4 px-5 lg:max-w-screen-xl mx-auto sticky lg:fixed top-0 left-0 right-0 z-10 opacity-70"}>
-                        {/* sticky lg:fixed top-0 left-0 right-0 z-10 opacity-70 */}
-                        {/*  bg-gradient-to-r from-[#1cccf5] to-[#77e9d0] */}
+                  <div className={"flex items-center justify-between  py-4 lg:max-w-screen-xl mx-auto "}>
+                        {/* sticky lg:fixed top-0 left-0 right-0 z-10 opacity-70 px-5 */}
+                        {/*  bg-gradient-to-r from-[#1cccf5] to-[#77e9d0] px-5 */}
                         {/* Logo */}
                         <div>
                               <Link to={"/"}>
@@ -27,20 +27,20 @@ const Heading = () => {
                               {
                                     nav.map((item, index) => (
                                           <div key={index}>
-                                                <Link className='text-[18px]' to={item?.path}>
+                                                <NavLink className={({ isActive }) => isActive ? "text-red-600 text-[18px] font-medium " : "text-gray-800 text-[18px] font-medium"} to={item?.path}>
                                                       {item?.title}
-                                                </Link>
+                                                </NavLink>
                                           </div>
                                     ))
                               }
                         </div>
                         {/* Login Button */}
-                        <Link to={"/login"}>
+                        <NavLink to={"/login"}>
                               <div className='hidden md:block'>
                                     <button className='bg-[#23b792] py-1.5 px-3 flex items-center gap-1 text-[18px] text-white'>Login <LuLogIn />
                                     </button>
                               </div>
-                        </Link>
+                        </NavLink>
                         {/* Mobile Menu */}
                         <div className='md:hidden block'>
                               <IoClose size={30} />
