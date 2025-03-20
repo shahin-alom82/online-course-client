@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png'
-import { LuLogIn } from 'react-icons/lu';
+import { LuLogIn, LuLogOut } from 'react-icons/lu';
 import { IoClose } from 'react-icons/io5';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from "react-hot-toast";
@@ -11,6 +11,9 @@ const Heading = () => {
 
       const { user, logOut } = useContext(AuthContext)
       const [role] = useRole()
+
+
+      // Nav
       const nav = [
             { title: "Home", path: "/" },
             { title: "Course", path: "/course" },
@@ -18,6 +21,8 @@ const Heading = () => {
             { title: "blog", path: "/Blog" },
       ]
 
+
+      // User & Role Condition
       if (user) {
             if (role === "admin") {
                   nav.push({ title: "Dashboard", path: "/dashboard/adminhome" });
@@ -25,6 +30,8 @@ const Heading = () => {
                   nav.push({ title: "Dashboard", path: "/dashboard/userhome" });
             }
       }
+
+      // Log Out
       const handleLogout = async () => {
             try {
                   await logOut()
@@ -46,7 +53,7 @@ const Heading = () => {
                               </Link>
                         </div>
                         {/* Nav item */}
-                        <div className='md:flex  items-center gap-x-10 hidden md:block'>
+                        <div className='md:flex items-center gap-x-10 hidden md:block'>
                               {
                                     nav.map((item, index) => (
                                           <div key={index}>
@@ -61,7 +68,7 @@ const Heading = () => {
                         {
                               user ? (
                                     <div onClick={() => handleLogout()} className='hidden md:block'>
-                                          <button className='bg-red-400 py-1.5 px-3 flex items-center gap-1 text-[18px] text-white'>Logout <LuLogIn />
+                                          <button className='bg-red-400 py-1.5 px-3 flex items-center gap-1 text-[18px] text-white'>Logout <LuLogOut />
                                           </button>
                                     </div>
                               ) : (

@@ -7,9 +7,13 @@ import Register from "../pages/Register";
 import Course from "../pages/Course/Course";
 import UserHome from "../pages/Dashboard/User/UserHome";
 import DashboardLayout from "../layout/DashboardLayout";
-import AdminMenu from "../components/Dashboard/Sidebar/Menu/AdminMenu";
 import AdminHome from "../pages/Dashboard/Admin/AdminHome";
+import Profile from "../pages/Dashboard/Profile";
+import AddCourse from "../pages/Dashboard/Admin/AddCourse";
 export const route = createBrowserRouter([
+
+
+
       {
             path: "/",
             element: <MainLayout />,
@@ -33,6 +37,8 @@ export const route = createBrowserRouter([
             ]
       },
 
+      
+
       {
             path: "dashboard",
             element: <DashboardLayout />,
@@ -44,6 +50,14 @@ export const route = createBrowserRouter([
                   {
                         path: "adminhome",
                         element: <AdminHome />
+                  },
+                  {
+                        path: "profile",
+                        element: <Profile />
+                  },
+                  {
+                        path: "addcourse",
+                        element: <AddCourse />
                   },
 
             ]

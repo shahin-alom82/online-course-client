@@ -5,7 +5,7 @@ const MenuStyle = ({ location, title, icon: Icon }) => {
 
       return (
             <div>
-                  <div className='mt-4'>
+                  <div className='mt-6'>
                         <NavLink
                               to={location}
                               className={({ isActive }) => `flex items-center gap-2 text-lg ${isActive ? "text-indigo-600" : ""}`}>

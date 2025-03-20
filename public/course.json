@@ -34,7 +34,7 @@
       {
             "title": "UI/UX Design Fundamentals",
             "description": "Learn the essentials of user interface and user experience design.",
-            "category": "Design",
+            "category": "UI/UX Design",
             "level": "Beginner",
             "price": 95,
             "duration": "4 months",
@@ -66,7 +66,7 @@
       {
             "title": "Cybersecurity Basics",
             "description": "Understand cybersecurity principles, ethical hacking, and network security.",
-            "category": "Cybersecurity",
+            "category": "Cyber Security",
             "level": "Advanced",
             "price": 70,
             "duration": "6 months",
@@ -98,7 +98,7 @@
       {
             "title": "Blockchain Development",
             "description": "Learn the fundamentals of blockchain technology and smart contracts.",
-            "category": "Blockchain",
+            "category": "MERN Stack Development",
             "level": "Intermediate",
             "price": 120,
             "duration": "7 months",
