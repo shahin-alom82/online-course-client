@@ -9,6 +9,9 @@ import { ImProfile } from "react-icons/im";
 
 const Sidebar = () => {
       const [role] = useRole()
+
+
+   
       return (
             <div>
                   {/* Top Menu*/}

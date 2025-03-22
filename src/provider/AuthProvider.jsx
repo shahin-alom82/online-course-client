@@ -10,7 +10,7 @@ const googleProvider = new GoogleAuthProvider()
 
 const AuthProvider = ({ children }) => {
 
-      
+
       const [user, setUser] = useState(null);
       const [loading, setLoading] = useState(false);
 
@@ -28,6 +28,8 @@ const AuthProvider = ({ children }) => {
                   photoURL: photo
             });
       };
+
+
 
 
       // Login User
@@ -54,11 +56,12 @@ const AuthProvider = ({ children }) => {
       const saveUser = async (user) => {
             const currentUser = {
                   email: user?.email,
-                  role: 'user',
+                  name: user?.displayName,
+                  role: user?.role || 'user',
                   status: 'verify'
             }
             const { data } = await axios.put('http://localhost:5000/users', currentUser)
-            console.log('data', data)
+            // console.log('data', data)
             return data;
       }
 
@@ -75,17 +78,37 @@ const AuthProvider = ({ children }) => {
 
 
 
+      // useEffect(() => {
+      //       const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      //             if (!currentUser) return;
+      //             setUser(currentUser)
+      //             saveUser(currentUser)
+      //             getToken(currentUser)
+      //             console.log('currentUser', currentUser)
+      //             setLoading(false);
+      //       });
+      //       return () => unSubscribe()
+      // }, [])
+
+
 
       useEffect(() => {
-            const unSubscribe = onAuthStateChanged(auth, currentUser => {
-                  setUser(currentUser)
-                  saveUser(currentUser)
-                  getToken(currentUser)
-                  console.log('currentUser', currentUser)
-                  setLoading(false);
+            const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+                  if (currentUser) {
+                        setUser(currentUser);
+                        saveUser(currentUser);
+                        getToken(currentUser);
+                        console.log('currentUser', currentUser);
+                        setLoading(false);
+                  } else {
+                        setUser(null);
+                        setLoading(false);
+                  }
             });
-            return () => unSubscribe()
-      }, [])
+
+            return () => unSubscribe();
+      }, []);
+
 
 
 

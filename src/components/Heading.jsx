@@ -36,6 +36,7 @@ const Heading = () => {
             try {
                   await logOut()
                   toast.success('Logout Successfully!')
+
             } catch (error) {
                   toast.error('Logout Error!')
             }

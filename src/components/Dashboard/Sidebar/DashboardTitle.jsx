@@ -26,7 +26,7 @@ const DashboardTitle = ({ role, action }) => {
 
             <div>
                   <div>
-                        <div className="flex uppercase items-center lg:text-[16px] text-sm lg:gap-6 gap-3 mt-1 text-black font-medium rounded-md">
+                        <div className="flex uppercase items-center lg:text-[16px] text-xs lg:gap-6 gap-3 mt-1 text-black font-medium rounded-md">
                               <h1 className="tracking-wide">{role}</h1>
                               <FaArrowRightLong />
                               <span>{action}</span>

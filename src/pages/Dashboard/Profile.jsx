@@ -8,17 +8,7 @@ import DashboardTitle from '../../components/Dashboard/Sidebar/DashboardTitle';
 
 const Profile = () => {
       const { user } = useContext(AuthContext)
-      const [role, isPending] = useRole()
-
-
-      // Loading
-      if (isPending) {
-            return (
-                  <div className="text-center mt-80">
-                        <p className='text-3xl text-[#23b792] tracking-wide'>Loading...</p>
-                  </div>
-            );
-      }
+      const [role] = useRole()
 
       return (
             <div>

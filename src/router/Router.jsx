@@ -10,6 +10,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import AdminHome from "../pages/Dashboard/Admin/AdminHome";
 import Profile from "../pages/Dashboard/Profile";
 import AddCourse from "../pages/Dashboard/Admin/AddCourse";
+import AllUsers from "../pages/Dashboard/Admin/AllUsers";
 export const route = createBrowserRouter([
 
 
@@ -37,7 +38,7 @@ export const route = createBrowserRouter([
             ]
       },
 
-      
+
 
       {
             path: "dashboard",
@@ -58,6 +59,10 @@ export const route = createBrowserRouter([
                   {
                         path: "addcourse",
                         element: <AddCourse />
+                  },
+                  {
+                        path: "allusers",
+                        element: <AllUsers />
                   },
 
             ]
