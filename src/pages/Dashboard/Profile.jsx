@@ -13,7 +13,7 @@ const Profile = () => {
       return (
             <div>
                   <DashboardTitle role={role} action={"Profile"} />
-                  <div className="mt-10 text-center py-8 px-6 lg:w-[480px] border border-[#23b792] rounded-xl shadow-lg bg-white">
+                  <div className="mt-10 text-center py-8 px-6 lg:w-[480px] border-2 border-[#ddd] rounded-xl shadow-lg bg-white">
 
                         <img
                               src={user?.photoURL}

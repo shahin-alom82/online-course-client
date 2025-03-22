@@ -1,0 +1,74 @@
+[
+      {
+            "name": "John Doe",
+            "subject": "Full-Stack Web Development",
+            "email": "john.doe@example.com",
+            "image": "https://i.ibb.co.com/TxkWq7gS/about2.webp",
+            "experience": "8 years",
+            "joiningDate": "2016-05-10",
+            "description": "John Doe is a passionate Full-Stack Web Developer with expertise in modern web technologies including React, Node.js, and database management. He enjoys mentoring students and building scalable applications."
+      },
+      {
+            "name": "Jane Smith",
+            "subject": "Data Science with Python",
+            "email": "jane.smith@example.com",
+            "image": "https://i.ibb.co.com/TxkWq7gS/about2.webp",
+            "experience": "10 years",
+            "joiningDate": "2014-07-15",
+            "description": "Jane Smith is a seasoned Data Scientist specializing in Python, machine learning, and AI. She has extensive industry experience and loves teaching data-driven decision-making techniques."
+      },
+      {
+            "name": "Alice Johnson",
+            "subject": "UI/UX Design Fundamentals",
+            "email": "alice.johnson@example.com",
+            "image": "https://i.ibb.co.com/TxkWq7gS/about2.webp",
+            "experience": "6 years",
+            "joiningDate": "2018-03-20",
+            "description": "Alice Johnson is a creative UI/UX designer with a deep understanding of user psychology and design principles. She helps students craft user-friendly and visually appealing interfaces."
+      },
+      {
+            "name": "Michael Brown",
+            "subject": "Android App Development",
+            "email": "michael.brown@example.com",
+            "image": "https://i.ibb.co.com/TxkWq7gS/about2.webp",
+            "experience": "7 years",
+            "joiningDate": "2017-09-05",
+            "description": "Michael Brown is an expert in Android development, specializing in Kotlin and Jetpack Compose. He has worked on multiple industry-level applications and enjoys sharing his knowledge with aspiring developers."
+      },
+      {
+            "name": "David Wilson",
+            "subject": "Cybersecurity Basics",
+            "email": "david.wilson@example.com",
+            "image": "https://i.ibb.co.com/TxkWq7gS/about2.webp",
+            "experience": "12 years",
+            "joiningDate": "2012-11-22",
+            "description": "David Wilson is a cybersecurity specialist with expertise in ethical hacking and network security. He has trained professionals worldwide to secure systems against cyber threats."
+      },
+      {
+            "name": "Emily White",
+            "subject": "Machine Learning for Beginners",
+            "email": "emily.white@example.com",
+            "image": "https://i.ibb.co.com/TxkWq7gS/about2.webp",
+            "experience": "5 years",
+            "joiningDate": "2019-06-30",
+            "description": "Emily White is a machine learning engineer passionate about AI and automation. She helps students grasp complex concepts with real-world examples and hands-on projects."
+      },
+      {
+            "name": "Robert Green",
+            "subject": "Blockchain Development",
+            "email": "robert.green@example.com",
+            "image": "https://i.ibb.co.com/TxkWq7gS/about2.webp",
+            "experience": "9 years",
+            "joiningDate": "2015-04-12",
+            "description": "Robert Green is a blockchain developer specializing in smart contracts and decentralized applications. He loves teaching students about blockchain technology and its real-world applications."
+      },
+      {
+            "name": "Sophia Martinez",
+            "subject": "Cloud Computing Essentials",
+            "email": "sophia.martinez@example.com",
+            "image": "https://i.ibb.co.com/TxkWq7gS/about2.webp",
+            "experience": "11 years",
+            "joiningDate": "2013-08-18",
+            "description": "Sophia Martinez is a cloud computing expert with hands-on experience in AWS, Azure, and Google Cloud. She helps students build and deploy scalable cloud applications."
+      }
+]

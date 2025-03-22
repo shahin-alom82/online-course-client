@@ -20,7 +20,7 @@ const Banner = () => {
                               </p>
                               <button className='flex items-center gap-2 bg-[#23b792] py-2 px-4 text-white mt-6'>Find Course <FaArrowRightLong /></button>
                         </div>
-                        <div className='bg-white py-4 hidden md:block px-6 absolute top-[480px] right-80 rounded-md'>
+                        <div className='bg-white py-4 animate-bounce  hidden md:block px-6 absolute top-[480px] right-80 rounded-md'>
                               <h1 className='text-xl'>Instrunctor</h1>
                               <div className="flex items-center gap-4 mt-2">
 

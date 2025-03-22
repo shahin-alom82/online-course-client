@@ -11,8 +11,11 @@ import AdminHome from "../pages/Dashboard/Admin/AdminHome";
 import Profile from "../pages/Dashboard/Profile";
 import AddCourse from "../pages/Dashboard/Admin/AddCourse";
 import AllUsers from "../pages/Dashboard/Admin/AllUsers";
-export const route = createBrowserRouter([
+import AddTeacher from "../pages/Dashboard/Admin/AddTeacher";
 
+
+
+export const route = createBrowserRouter([
 
 
       {
@@ -63,6 +66,10 @@ export const route = createBrowserRouter([
                   {
                         path: "allusers",
                         element: <AllUsers />
+                  },
+                  {
+                        path: "addteacher",
+                        element: <AddTeacher />
                   },
 
             ]
