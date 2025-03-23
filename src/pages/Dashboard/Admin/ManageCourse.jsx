@@ -5,15 +5,14 @@ import DashboardTitle from '../../../components/Dashboard/Sidebar/DashboardTitle
 import useCourse from '../../../hocks/useCourse';
 import useAxiosSecure from '../../../hocks/useAxiosSecure';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const ManageCourse = () => {
 
       const axiosSecure = useAxiosSecure()
-      const [course] = useCourse()
+      const [course, , refetch] = useCourse()
 
-
-
-      // User Delete
+      // Course Delete
       const handleDelete = id => {
             Swal.fire({
                   title: "Are you sure?",
@@ -63,37 +62,57 @@ const ManageCourse = () => {
 
                               {/* Table Body */}
                               <div className="border border-[#ddd] rounded-b-xl overflow-hidden">
-                                    {course.map((item, index) => (
-                                          <div key={item?._id}
-                                                className="grid grid-cols-1 md:grid-cols-[80px_150px_1fr_120px_100px_100px] 
-                        items-center gap-6 py-4 px-4 border-b border-[#ddd] text-center bg-white hover:bg-gray-100 transition">
 
-                                                {/* Serial Number */}
-                                                <p className="text-[16px] font-medium bg-[#ddf4f0] rounded-full py-1 px-3 text-gray-700 mx-auto">
-                                                      {index + 1}
-                                                </p>
+                                    {
+                                          course.length === 0 ? (
 
-                                                {/* Image */}
-                                                <div className="flex justify-center">
-                                                      <img src={item?.image} alt="img" className="h-20 w-36 rounded-lg shadow-md" />
+                                                <div className="text-center py-6 text-gray-600 font-medium text-lg">
+                                                      No Courses Found
                                                 </div>
-                                                {/* Title */}
-                                                <h1 className="text-gray-800 font-medium text-[18px]">{item?.title}</h1>
+                                          )
+                                                :
+                                                (
 
-                                                {/* Price */}
-                                                <h1 className="text-gray-900 font-medium lg:ml-[67px]">${item?.price}</h1>
+                                                      course.map((item, index) => (
+                                                            <div key={item?._id}
+                                                                  className="grid grid-cols-1 md:grid-cols-[80px_150px_1fr_120px_100px_100px] 
+                                    items-center gap-6 py-4 px-4 border-b border-[#ddd] text-center bg-white hover:bg-gray-100 transition">
 
-                                                {/* Delete Button */}
-                                                <span onClick={() => handleDelete(item)} className="cursor-pointer text-red-600 duration-300 hover:text-red-800 flex justify-center lg:ml-4">
-                                                      <RiDeleteBinLine size={22} />
-                                                </span>
+                                                                  {/* Serial Number */}
+                                                                  <p className="text-[16px] font-medium bg-[#ddf4f0] rounded-full py-1 px-3 text-gray-700 mx-auto">
+                                                                        {index + 1}
+                                                                  </p>
 
-                                                {/* Edit Button */}
-                                                <span className="cursor-pointer text-blue-600 duration-300 hover:text-blue-800 flex justify-center">
-                                                      <FiEdit size={22} />
-                                                </span>
-                                          </div>
-                                    ))}
+                                                                  {/* Image */}
+                                                                  <div className="flex justify-center">
+                                                                        <img src={item?.image} alt="img" className="h-20 w-36 rounded-lg shadow-md" />
+                                                                  </div>
+                                                                  {/* Title */}
+                                                                  <h1 className="text-gray-800 font-medium text-[18px]">{item?.title}</h1>
+
+                                                                  {/* Price */}
+                                                                  <h1 className="text-gray-900 font-medium lg:ml-[67px]">${item?.price}</h1>
+
+                                                                  {/* Delete Button */}
+                                                                  <span onClick={() => handleDelete(item?._id)} className="cursor-pointer text-red-600 duration-300 hover:text-red-800 flex justify-center lg:ml-4">
+                                                                        <RiDeleteBinLine size={22} />
+                                                                  </span>
+
+                                                                  {/* Edit Button */}
+                                                                  <Link to={`/dashboard/update/${item._id}`}>
+                                                                        <span className="cursor-pointer text-blue-600 duration-300 hover:text-blue-800 flex justify-center">
+                                                                              <FiEdit size={22} />
+                                                                        </span>
+                                                                  </Link>
+
+                                                            </div>
+                                                      ))
+
+                                                )
+
+                                    }
+
+
                               </div>
                         </div>
 

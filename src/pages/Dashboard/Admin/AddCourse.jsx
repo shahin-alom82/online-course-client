@@ -28,6 +28,7 @@ const AddCourse = () => {
         title: data?.title,
         price: data?.price,
         duration: data?.duration,
+        instructorName: data?.instructorName,
         image: res?.data?.data?.display_url,
         enrollmentCount: data?.enrollmentCount,
         lessons: data?.lessons,
@@ -200,9 +201,9 @@ const AddCourse = () => {
         </div>
 
 
-        {/* 2 File Upload */}
-        <div>
-          <div >
+        {/* 1 File Upload  Name*/}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className='w-full md:w-1/2'>
             <label className="block text-gray-700 font-medium">Course Image</label>
             <input
               {...register("image")}
@@ -211,15 +212,15 @@ const AddCourse = () => {
               className="w-full outline-none border border-gray-400 placeholder:text-gray-700 rounded mt-2 py-2 px-3"
             />
           </div>
-          {/* <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Instructor Image</label>
+          <div className="w-full md:w-1/2">
+            <label className="block text-gray-700 font-medium">Instructor Name</label>
             <input
-              {...register("instructorImage")}
+              {...register("instructorName")}
               required
-              type="file"
+              type="text"
               className="w-full outline-none border border-gray-400 placeholder:text-gray-700 rounded mt-2 py-2 px-3"
             />
-          </div> */}
+          </div>
         </div>
 
         {/* Course Description */}

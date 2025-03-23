@@ -5,7 +5,8 @@ import useAxiosPublic from "./useAxiosPublic";
 const useCourse = () => {
 
       const axiosPublic = useAxiosPublic()
-      const { data: menu = [], isPending: loading, refetch } = useQuery({
+      
+      const { data: course = [], isPending: loading, refetch } = useQuery({
             queryKey: ["course"],
             queryFn: async () => {
                   const res = await axiosPublic.get("/course");
@@ -13,7 +14,7 @@ const useCourse = () => {
             },
       });
 
-      return [menu, loading, refetch];
+      return [course, loading, refetch];
 
 }
 
