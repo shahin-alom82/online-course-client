@@ -19,7 +19,7 @@ const DashboardLayout = () => {
       return (
             <div className="flex w-ful">
                   {/* Side bar */}
-                  <div className=" md:w-[18%] min-h-screen fixed px-4 py-4 bg-[#c9d0d5]">
+                  <div className=" md:w-[18%] min-h-screen fixed px-4 py-4 bg-[#e6e8e8]">
                         <Sidebar />
                   </div>
                   {/* Content Section */}

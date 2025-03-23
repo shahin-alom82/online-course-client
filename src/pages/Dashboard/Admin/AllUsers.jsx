@@ -68,46 +68,56 @@ const AllUsers = () => {
             <div>
                   <DashboardTitle role={"Admin"} action={"ALL Users"} />
                   <div className='max-w-screen-md'>
-                        <div className="mt-8">
-                              {/* Table Header with Borders */}
-                              <div className="hidden lg:grid py-4 px-6 uppercase rounded-t-xl text-white bg-[#23b792] text-[18px] font-medium grid-cols-3 justify-between w-full ">
+
+
+                        <div className="mt-8 max-w-screen-lg">
+                              {/* Table Header */}
+                              <div className="hidden lg:grid py-4 px-6 uppercase bg-[#23b792] text-white text-[18px] font-medium
+            grid-cols-[80px_1fr_120px_120px] text-center rounded-t-xl">
+                                    <p>SL. No</p>
                                     <p>Email</p>
-                                    <p className="pl-24">Delete</p>
-                                    <p className="pl-[100px]">Role</p>
+                                    <p>Delete</p>
+                                    <p>Role</p>
                               </div>
 
-                              {/* Table Body with Borders */}
-                              <div>
-                                    {users.map((item) => (
-                                          <div key={item?._id} className="lg:border-b lg:border-l lg:border-r  border-[#ddd]">
-                                                <div className="w-full grid grid-cols-1 md:grid-cols-3 items-center gap-6 py-4">
-                                                      {/* Email Column with Borders */}
-                                                      <p className="lg:text-[16px] text-[13px] text-gray-800 font-medium px-4">{item?.email}</p>
+                              {/* Table Body */}
+                              <div className="border border-[#ddd] rounded-b-xl overflow-hidden">
+                                    {users.map((item, index) => (
+                                          <div key={item?._id}
+                                                className="grid grid-cols-1 md:grid-cols-[80px_1fr_120px_120px] 
+                        items-center gap-4 py-4 px-6 border-b border-[#ddd] text-center bg-white hover:bg-gray-100 transition">
 
-                                                      {/* Delete Column */}
+                                                {/* SL No */}
+                                                <p className="text-[16px] font-medium bg-[#ddf4f0] rounded-full py-1 px-3 text-gray-700 mx-auto">
+                                                      {index + 1}
+                                                </p>
+
+                                                {/* Email Column */}
+                                                <p className="text-gray-800 font-medium text-[16px]">{item?.email}</p>
+
+                                                {/* Delete Button */}
+                                                <span
+                                                      onClick={() => handleDelete(item?._id)}
+                                                      className="cursor-pointer text-red-600 duration-300 hover:text-red-800 flex justify-center">
+                                                      <RiDeleteBinLine size={22} />
+                                                </span>
+
+                                                {/* Role Column */}
+                                                {item.role === "admin" ? (
+                                                      <span className="text-gray-900 font-medium">Admin</span>
+                                                ) : (
                                                       <span
-                                                            onClick={() => handleDelete(item?._id)}
-                                                            className="cursor-pointer text-red-600 duration-300 hover:text-red-800 px-4 lg:pl-28"
-                                                      >
-                                                            <RiDeleteBinLine size={20} />
+                                                            onClick={() => handleMakeAdmin(item)}
+                                                            className="cursor-pointer text-blue-600 duration-300 hover:text-blue-800 flex justify-center">
+                                                            <GrUserAdmin size={22} />
                                                       </span>
-
-                                                      {/* Role Column with Borders */}
-                                                      {item.role === "admin" ? (
-                                                            <span className="lg:text-[16px] text-[13px] text-gray-900 px-4 lg:pl-[78px]">Admin</span>
-                                                      ) : (
-                                                            <span
-                                                                  onClick={() => handleMakeAdmin(item)}
-                                                                  className="cursor-pointer text-blue-600 duration-300 hover:text-blue-800 px-4 lg:pl-[90px]"
-                                                            >
-                                                                  <GrUserAdmin size={20} />
-                                                            </span>
-                                                      )}
-                                                </div>
+                                                )}
                                           </div>
                                     ))}
                               </div>
                         </div>
+
+
                   </div>
 
 

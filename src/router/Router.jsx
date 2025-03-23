@@ -12,6 +12,7 @@ import Profile from "../pages/Dashboard/Profile";
 import AddCourse from "../pages/Dashboard/Admin/AddCourse";
 import AllUsers from "../pages/Dashboard/Admin/AllUsers";
 import AddTeacher from "../pages/Dashboard/Admin/AddTeacher";
+import ManageCourse from "../pages/Dashboard/Admin/ManageCourse";
 
 
 
@@ -70,6 +71,10 @@ export const route = createBrowserRouter([
                   {
                         path: "addteacher",
                         element: <AddTeacher />
+                  },
+                  {
+                        path: "managecourse",
+                        element: <ManageCourse />
                   },
 
             ]

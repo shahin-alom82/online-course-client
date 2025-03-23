@@ -4,6 +4,7 @@ import Container from '../../components/Container';
 import useCourse from '../../hocks/useCourse';
 import CourseCart from './CourseCart';
 const Course = () => {
+      
       const [course] = useCourse()
 
 
