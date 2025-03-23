@@ -82,38 +82,52 @@ const AllUsers = () => {
 
                               {/* Table Body */}
                               <div className="border border-[#ddd] rounded-b-xl overflow-hidden">
-                                    {users.map((item, index) => (
-                                          <div key={item?._id}
-                                                className="grid grid-cols-1 md:grid-cols-[80px_1fr_120px_120px] 
-                        items-center gap-4 py-4 px-6 border-b border-[#ddd] text-center bg-white hover:bg-gray-100 transition">
+                                    {
 
-                                                {/* SL No */}
-                                                <p className="text-[16px] font-medium bg-[#ddf4f0] rounded-full py-1 px-3 text-gray-700 mx-auto">
-                                                      {index + 1}
-                                                </p>
+                                          users.length === 0 ? (
+                                                <div className="text-center py-6 text-gray-600 font-medium text-lg">
+                                                      <img src={'https://i.ibb.co.com/MxrX4hmV/empty-Cart.png'} alt="img" className='mx-auto h-20' />
+                                                      <h1 className='mt-2 text-sm tracking-wide'>Data Not Found</h1>
+                                                </div>
+                                          )
+                                                :
+                                                (
+                                                      users.map((item, index) => (
+                                                            <div key={item?._id}
+                                                                  className="grid grid-cols-1 md:grid-cols-[80px_1fr_120px_120px] 
+                                          items-center gap-4 py-4 px-6 border-b border-[#ddd] text-center bg-white hover:bg-gray-100 transition">
 
-                                                {/* Email Column */}
-                                                <p className="text-gray-800 font-medium text-[16px]">{item?.email}</p>
+                                                                  {/* SL No */}
+                                                                  <p className="text-[16px] font-medium bg-[#ddf4f0] rounded-full py-1 px-3 text-gray-700 mx-auto">
+                                                                        {index + 1}
+                                                                  </p>
 
-                                                {/* Delete Button */}
-                                                <span
-                                                      onClick={() => handleDelete(item?._id)}
-                                                      className="cursor-pointer text-red-600 duration-300 hover:text-red-800 flex justify-center">
-                                                      <RiDeleteBinLine size={22} />
-                                                </span>
+                                                                  {/* Email Column */}
+                                                                  <p className="text-gray-800 font-medium text-[16px]">{item?.email}</p>
 
-                                                {/* Role Column */}
-                                                {item.role === "admin" ? (
-                                                      <span className="text-gray-900 font-medium">Admin</span>
-                                                ) : (
-                                                      <span
-                                                            onClick={() => handleMakeAdmin(item)}
-                                                            className="cursor-pointer text-blue-600 duration-300 hover:text-blue-800 flex justify-center">
-                                                            <GrUserAdmin size={22} />
-                                                      </span>
-                                                )}
-                                          </div>
-                                    ))}
+                                                                  {/* Delete Button */}
+                                                                  <span
+                                                                        onClick={() => handleDelete(item?._id)}
+                                                                        className="cursor-pointer text-red-600 duration-300 hover:text-red-800 flex justify-center">
+                                                                        <RiDeleteBinLine size={22} />
+                                                                  </span>
+
+                                                                  {/* Role Column */}
+                                                                  {item.role === "admin" ? (
+                                                                        <span className="text-gray-900 font-medium">Admin</span>
+                                                                  ) : (
+                                                                        <span
+                                                                              onClick={() => handleMakeAdmin(item)}
+                                                                              className="cursor-pointer text-blue-600 duration-300 hover:text-blue-800 flex justify-center">
+                                                                              <GrUserAdmin size={22} />
+                                                                        </span>
+                                                                  )}
+                                                            </div>
+                                                      ))
+                                                )
+
+
+                                    }
                               </div>
                         </div>
 

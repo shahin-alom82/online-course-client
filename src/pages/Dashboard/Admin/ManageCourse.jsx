@@ -67,7 +67,8 @@ const ManageCourse = () => {
                                           course.length === 0 ? (
 
                                                 <div className="text-center py-6 text-gray-600 font-medium text-lg">
-                                                      No Courses Found
+                                                      <img src={'https://i.ibb.co.com/MxrX4hmV/empty-Cart.png'} alt="img" className='mx-auto h-20' />
+                                                      <h1 className='mt-2 text-sm tracking-wide'>Data Not Found</h1>
                                                 </div>
                                           )
                                                 :
