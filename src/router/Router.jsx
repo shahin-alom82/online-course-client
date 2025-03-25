@@ -14,6 +14,7 @@ import AllUsers from "../pages/Dashboard/Admin/AllUsers";
 import AddTeacher from "../pages/Dashboard/Admin/AddTeacher";
 import ManageCourse from "../pages/Dashboard/Admin/ManageCourse";
 import UpdateCourse from "../pages/Dashboard/Admin/UpdateCourse";
+import CourseDetails from "../pages/Course/CourseDetails";
 
 
 
@@ -39,7 +40,11 @@ export const route = createBrowserRouter([
                   {
                         path: "/course",
                         element: <Course />
-                  }
+                  },
+                  {
+                        path: "/coursedetails/:id",
+                        element: <CourseDetails />
+                  },
             ]
       },
 
@@ -82,7 +87,6 @@ export const route = createBrowserRouter([
                         element: <UpdateCourse />,
                         loader: ({ params }) => fetch(`http://localhost:5000/course/${params?.id}`)
                   },
-
             ]
       }
 ])
