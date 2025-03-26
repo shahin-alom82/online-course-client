@@ -15,6 +15,7 @@ import AddTeacher from "../pages/Dashboard/Admin/AddTeacher";
 import ManageCourse from "../pages/Dashboard/Admin/ManageCourse";
 import UpdateCourse from "../pages/Dashboard/Admin/UpdateCourse";
 import CourseDetails from "../pages/Course/CourseDetails";
+import Contact from "../pages/Contact";
 
 
 
@@ -40,6 +41,10 @@ export const route = createBrowserRouter([
                   {
                         path: "/course",
                         element: <Course />
+                  },
+                  {
+                        path: "/contact",
+                        element: <Contact />
                   },
                   {
                         path: "/coursedetails/:id",

@@ -4,13 +4,13 @@ import Container from '../../components/Container';
 import useCourse from '../../hocks/useCourse';
 import CourseCart from './CourseCart';
 const Course = () => {
-      
+
       const [course] = useCourse()
       return (
             <div>
                   <Container className='border-t-2 border-[#23b792]'>
                         <Helmet>
-                              <title>EduBlink | Our Course </title>
+                              <title>EduBlink | Course </title>
                         </Helmet>
                         <div className='mt-8'>
                               <h1 className='text-2xl font-medium text-gray-800 uppercase'>Well Come To Our Course</h1>
