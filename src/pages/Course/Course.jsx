@@ -6,6 +6,7 @@ import CourseCart from './CourseCart';
 const Course = () => {
 
       const [course] = useCourse()
+      
       return (
             <div>
                   <Container className='border-t-2 border-[#23b792]'>

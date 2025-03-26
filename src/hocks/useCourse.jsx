@@ -3,9 +3,7 @@ import useAxiosPublic from "./useAxiosPublic";
 
 
 const useCourse = () => {
-
       const axiosPublic = useAxiosPublic()
-      
       const { data: course = [], isPending: loading, refetch } = useQuery({
             queryKey: ["course"],
             queryFn: async () => {

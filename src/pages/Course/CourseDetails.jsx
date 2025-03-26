@@ -1,18 +1,16 @@
+import { useLoaderData } from 'react-router-dom';
 import Container from '../../components/Container';
 import React from 'react';
-import useCourse from '../../hocks/useCourse';
-import { useParams } from 'react-router-dom';
 const CourseDetails = () => {
 
 
-      const [course] = useCourse()
-      const { id } = useParams()
-      console.log('course,id', course, id)
-
+      const details = useLoaderData()
+      console.log('details', details)
       return (
             <div>
                   <Container>
-                        <h1>uikuyhikuk</h1>
+                        <img src={details?.image} alt="img" />
+                        <h1>{details?.title}</h1>
                   </Container>
             </div>
       );
