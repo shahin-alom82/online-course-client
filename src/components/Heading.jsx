@@ -18,7 +18,7 @@ const Heading = () => {
             { title: "Home", path: "/" },
             { title: "Course", path: "/course" },
             { title: "Contact", path: "/contact" },
-            { title: "blog", path: "/Blog" },
+            { title: "Blog", path: "/blog" },
       ]
 
 

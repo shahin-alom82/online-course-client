@@ -57,15 +57,15 @@ const Contact = () => {
                                           </div>
                                           <div className='mt-4'>
                                                 <h1 className='text-[22px]'>Address</h1>
-                                                <p className='mt-2'>Assim, Bashdi, Fulbaria, Mymensingh</p>
+                                                <p className='mt-2 text-gray-600'>Assim, Bashdi, Fulbaria, Mymensingh</p>
                                           </div>
                                           <div className='mt-3'>
                                                 <h1 className='text-[22px]'>Email</h1>
-                                                <p className='mt-2'>shahinalom3511371@gmail.com</p>
+                                                <p className='mt-2 text-gray-600'>shahinalom3511371@gmail.com</p>
                                           </div>
                                           <div className='mt-3'>
                                                 <h1 className='text-[22px]'>Phone</h1>
-                                                <p className='mt-2'>(+088) 01682247291</p>
+                                                <p className='mt-2 text-gray-600'>(+088) 01682247291</p>
                                           </div>
                                           <div>
                                                 <div className='flex items-center gap-6 mt-4'>
@@ -73,7 +73,7 @@ const Contact = () => {
                                                             <FaFacebookSquare size={25} className='cursor-pointer text-blue-500' />
                                                       </Link>
                                                       <Link to={'https://github.com/shahin-alom82'}>
-                                                            <FaGithub size={25} className='cursor-pointer text-pink-500' />
+                                                            <FaGithub size={25} className='cursor-pointer text-black' />
                                                       </Link>
                                                       <FaYoutube size={25} className='cursor-pointer text-red-500' />
                                                       <FaTwitter size={25} className='cursor-pointer text-blue-400' />
@@ -84,7 +84,7 @@ const Contact = () => {
                                     <div className='mt-16 lg:mt-0'>
                                           <div className='text-gray-800'>
                                                 <h1 className='text-3xl'>Get In Touch</h1>
-                                                <p className='mt-2'>Fill out this form for booking a consultant advising session.</p>
+                                                <p className='mt-2 text-gray-600'>Fill out this form for booking a consultant advising session.</p>
                                           </div>
                                           <form onSubmit={handleSubmit} className='flex flex-col gap-4 mt-4'>
                                                 <input
