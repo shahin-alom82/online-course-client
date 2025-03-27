@@ -16,9 +16,7 @@ import ManageCourse from "../pages/Dashboard/Admin/ManageCourse";
 import UpdateCourse from "../pages/Dashboard/Admin/UpdateCourse";
 import CourseDetails from "../pages/Course/CourseDetails";
 import Contact from "../pages/Contact";
-import Blog from "../pages/Blog";
-
-
+import Blog from "../pages/Blog/Blog";
 
 export const route = createBrowserRouter([
 

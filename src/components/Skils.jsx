@@ -1,11 +1,8 @@
 import React from 'react';
 import Container from './Container';
-import aboutimg1 from '../assets/about1.jpeg'
 import aboutimg from '../assets/about2.webp'
-import aboutimg3 from '../assets/about3.jpg'
 import { GiCheckMark } from 'react-icons/gi';
 import { LiaAwardSolid } from 'react-icons/lia';
-import { FaPlus } from 'react-icons/fa6';
 const Skils = () => {
       return (
             <div className='mt-20 lg:mx-52'>

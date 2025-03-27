@@ -1,21 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaInstagram, FaGithub, FaAngleRight, FaRegCalendarCheck } from "react-icons/fa";
-import Container from "../components/Container";
+import Container from "../../components/Container";
 import { Helmet } from "react-helmet-async";
-import useCourse from "../hocks/useCourse"
+import useCourse from "../../hocks/useCourse"
 import { MdOutlinePlayLesson } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
+import SearchInput from "./SearchInput";
 const Blog = () => {
 
       const [course] = useCourse()
 
       return (
-            <Container className={'border-t-2 border-[#23b792]'}>
+            <Container className={'border-t-2 border-[#23b792] mt-[82px]'}>
                   <Helmet>
                         <title>EduBlink | Blog</title>
                   </Helmet>
-                  <div className="px-4 py-8">
+                  <div className="px-4 py-5">
                         {/* Header Section */}
                         <div className='mt-6'>
                               <div className='flex flex-col lg:justify-center lg:items-center lg:text-center'>
@@ -31,12 +32,14 @@ const Blog = () => {
                         </div>
 
                         {/* Blog List */}
-                        <div className="flex flex-col lg:flex-row gap-8 mt-10">
+                        <div className="flex flex-col lg:flex-row gap-8 mt-8">
                               {/* Left Side (Scrollable) */}
-                              <div className="lg:w-2/3 h-[100vh] overflow-y-auto py-4 px-4">
+                              <div className="lg:w-2/3 h-[100vh] overflow-y-auto py-4 px-4 ">
+                                    {/* h-[100vh] overflow-y-auto py-4 px-4 */}
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                                           {course.map((blog) => (
-                                                <div key={blog._id} className="rounded-xl overflow-hidden shadow-lg">
+                                                <div key={blog._id} className="rounded-xl shadow-lg overflow-hidden">
+                                                      {/* overflow-hidden */}
                                                       <img src={blog.image} alt={blog?.title} className="w-full lg:h-64" />
                                                       <div className="p-4">
                                                             <h2 className="font-medium text-gray-600 uppercase">{blog.category}</h2>
@@ -62,10 +65,11 @@ const Blog = () => {
                               </div>
 
                               {/* Right Side (Fixed) */}
-                              <div className="w-1/3 h-screen sticky top-20 mt-6">
+                              <div className="w-1/3 mt-4 h-screen sticky top-20">
+                                    {/* h-screen sticky top-20 */}
                                     <h1>Search</h1>
                                     <div>
-
+                                          <SearchInput />
                                     </div>
                               </div>
                         </div>

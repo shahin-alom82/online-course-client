@@ -31,7 +31,7 @@ const Contact = () => {
       };
 
       return (
-            <div>
+            <div className='mt-[82px]'>
                   <Helmet>
                         <title>EduBlink | Contact Us</title>
                   </Helmet>

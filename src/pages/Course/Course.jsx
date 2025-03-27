@@ -8,7 +8,7 @@ const Course = () => {
       const [course] = useCourse()
       
       return (
-            <div>
+            <div className='mt-[82px]'>
                   <Container className='border-t-2 border-[#23b792]'>
                         <Helmet>
                               <title>EduBlink | Course </title>

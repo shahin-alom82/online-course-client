@@ -7,7 +7,7 @@ import aboutimg from '../assets/about2.webp'
 
 const Banner = () => {
       return (
-            <div>
+            <div className='mt-[82px]'>
                   <Container className={"banner-bg-img relative"}>
                         <img src={img} alt="img" className='lg:h-[648px] pt-16 lg:ml-[730px] md:ml-80 relative' />
                         <div className='absolute  lg:ml-28 md:ml-10 top-48 hidden md:block'>
