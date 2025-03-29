@@ -151,7 +151,7 @@ const Heading = () => {
                         {/* Logo */}
                         <div>
                               <Link to={"/"}>
-                                    <img src={logo} alt="logo" className="h-10" />
+                                    <img src={logo} alt="logo" className="h-12" />
                               </Link>
                         </div>
 

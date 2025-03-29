@@ -96,16 +96,24 @@ const CourseDetails = () => {
                                           <h1 className="text-2xl font-medium tracking-wide text-gray-800  font">
                                                 Course Description
                                           </h1>
-                                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet repellendus quis magni ea sit nesciunt aperiam. Nesciunt optio temporibus ex minus, eos non est, enim nostrum modi doloremque sequi eius ipsam architecto placeat dolorum mollitia atque. Modi repudiandae illo doloremque porro officia corrupti, temporibus reprehenderit obcaecati. Reiciendis inventore, non amet voluptates perferendis iste alias nobis quod excepturi cum fugit, accusantium blanditiis iure, eveniet dolores! Et nam aperiam nesciunt ipsum praesentium totam quidem. Reiciendis facere quasi consequuntur et esse alias maxime ad laudantium nemo cupiditate! Laborum maxime eveniet iusto distinctio sequi praesentium, natus sit temporibus fuga, atque sunt quo! Itaque, vitae.</p>
+                                          <p className='text-gray-600 tracking-wide mt-4'>This comprehensive program covers Web Development, Data Science, UI/UX Design, Android Development, Cybersecurity, AI, Blockchain, and Cloud Computing. You will learn frontend & backend development, <br /> data analysis & machine learning, and cybersecurity & blockchain technology.</p>
                                     </div>
                                     <div className="mt-10 bg-white">
                                           <h1 className="text-2xl font-medium tracking-wide text-gray-800  font">
                                                 What You’ll Learn From This Course
                                           </h1>
-                                          <p className='flex items-center gap-2'><GoDotFill /> Neque sodales ut etiam sit amet nisl purus non tellus orci ac auctor</p>
-                                          <p className='flex items-center gap-2'><GoDotFill /> Tristique nulla aliquet enim tortor at auctor urna. Sit amet aliquam id diam maer</p>
-                                          <p className='flex items-center gap-2'><GoDotFill /> Nam libero justo laoreet sit amet. Lacus sed viverra tellus in hac</p>
-                                          <p className='flex items-center gap-2'><GoDotFill />Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis</p>
+                                          <div className='mt-4 space-y-3 text-gray-700 tracking-wide'>
+                                                <p className='flex items-center gap-2'><GoDotFill size={15} /> Neque sodales ut etiam sit amet nisl purus non tellus orci ac auctor</p>
+                                                <p className='flex items-center gap-2'><GoDotFill size={15} /> Tristique nulla aliquet enim tortor at auctor urna. Sit amet aliquam id diam maer</p>
+                                                <p className='flex items-center gap-2'><GoDotFill size={15} /> Nam libero justo laoreet sit amet. Lacus sed viverra tellus in hac</p>
+                                                <p className='flex items-center gap-2'><GoDotFill size={15} />Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis</p>
+                                          </div>
+                                    </div>
+                                    <div className="mt-10 bg-white">
+                                          <h1 className="text-2xl font-medium tracking-wide text-gray-800  font">
+                                                Certification
+                                          </h1>
+                                          <p className='text-gray-600 tracking-wide mt-4'>Yes! Upon successful completion of the course, you will receive a verified certification recognized by industry professionals.</p>
                                     </div>
                               </div>
 
