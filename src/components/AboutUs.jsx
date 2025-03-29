@@ -3,7 +3,7 @@ import Container from './Container';
 import aboutimg from '../assets/about2.webp'
 import { GiCheckMark } from 'react-icons/gi';
 import { LiaAwardSolid } from 'react-icons/lia';
-const Skils = () => {
+const AboutUs = () => {
       return (
             <div className='mt-20 lg:mx-52'>
                   <Container>
@@ -38,4 +38,4 @@ const Skils = () => {
       );
 };
 
-export default Skils;
+export default AboutUs;

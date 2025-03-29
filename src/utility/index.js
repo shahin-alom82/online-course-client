@@ -9,3 +9,4 @@ export const imageUpload = async (image) => {
       const imageUrl = data.data.display_url;
       return imageUrl;
 };
+

@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 
 const CourseCart = ({ course }) => {
 
-
-
-
       return (
             <div className='relative'>
                   <img src={course?.image} alt="img" className='w-full h-40 rounded-lg' />

@@ -6,8 +6,8 @@ import { useLoaderData } from 'react-router-dom';
 import { LiaAwardSolid, LiaUserTieSolid } from "react-icons/lia";
 import { GrLanguage } from "react-icons/gr";
 
-const CourseDetailsRightSide = ({course}) => {
-     
+const CourseDetailsRightSide = ({ course }) => {
+
       return (
             <div>
                   {/* h-screen sticky top-20 */}
