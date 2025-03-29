@@ -175,14 +175,14 @@ const AddCourse = () => {
               className="w-full px-3 py-2.5 border mt-2 border-gray-400 rounded placeholder:text-gray-700 text-gray-800 bg-white "
               required
             >
-              <option value="salad">Web Development</option>
-              <option value="pizza">Data Science</option>
-              <option value="soup">UI/UX Design</option>
-              <option value="dessert">Mobile Development</option>
-              <option value="drinks">Cyber Security</option>
-              <option value="drinks">Artificial Intelligence</option>
-              <option value="drinks">MERN Stack Development</option>
-              <option value="drinks">Cloud Computing</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Data Science">Data Science</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Mobile Development">Mobile Development</option>
+              <option value="Cyber Security">Cyber Security</option>
+              <option value="Artificial Intelligence">Artificial Intelligence</option>
+              <option value="MERN Stack Development">MERN Stack Development</option>
+              <option value="Cloud Computing">Cloud Computing</option>
             </select>
           </div>
           {/* Level Select */}
@@ -193,9 +193,9 @@ const AddCourse = () => {
               className="w-full px-3 py-2.5 border mt-2 border-gray-400 rounded placeholder:text-gray-700 text-gray-800 bg-white "
               required
             >
-              <option value="salad">Advanced</option>
-              <option value="pizza">Intermediate</option>
-              <option value="soup">Beginner</option>
+              <option value="Advanced">Advanced</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Beginner">Beginner</option>
             </select>
           </div>
         </div>
