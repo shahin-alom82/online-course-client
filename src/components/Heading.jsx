@@ -122,8 +122,8 @@ const Heading = () => {
       const nav = [
             { title: "Home", path: "/" },
             { title: "Course", path: "/course" },
-            { title: "Contact", path: "/contact" },
             { title: "Blog", path: "/blog" },
+            { title: "Contact", path: "/contact" },
       ];
 
       // User & Role Condition
