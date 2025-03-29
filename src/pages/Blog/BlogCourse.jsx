@@ -9,7 +9,7 @@ const BlogCourse = ({ blog }) => {
             <div key={blog._id} className="rounded-xl shadow-lg">
                   {/* overflow-hidden */}
                   <Link to={`/coursedetails/${blog._id}`}>
-                        <img src={blog.image} alt={blog?.title} className="w-full lg:h-64" />
+                        <img src={blog.image} alt={blog?.title} className="w-full lg:h-64 rounded-t-xl" />
                   </Link>
                   <div className="p-4">
                         <h2 className="font-medium text-gray-600 uppercase">{blog.category}</h2>
