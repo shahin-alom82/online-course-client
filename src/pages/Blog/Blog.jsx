@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaAngleRight, FaRegCalendarCheck } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 import Container from "../../components/Container";
 import { Helmet } from "react-helmet-async";
 import useCourse from "../../hocks/useCourse"
-import { PiStudentFill } from "react-icons/pi";
 import SearchInput from "./SearchInput";
 import SortCourse from "./SortCourse";
 import Categories from "./Categories";
+import BlogCourse from "./BlogCourse";
 const Blog = () => {
 
       const [course] = useCourse()
+
       return (
             <Container className={'border-t-2 border-[#23b792] mt-[82px]'}>
                   <Helmet>
@@ -31,45 +32,18 @@ const Blog = () => {
                               </div>
                         </div>
 
+
                         {/* Blog List */}
                         <div className="flex flex-col lg:flex-row gap-8 mt-8">
-                              {/* Left Side (Scrollable) */}
+                              {/* Left Side */}
                               <div className="lg:w-2/3">
                                     {/* h-[100vh] overflow-y-auto py-4 px-4 */}
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                                          {course.map((blog) => (
-                                                <div key={blog._id} className="rounded-xl shadow-lg">
-                                                      {/* overflow-hidden */}
-                                                      <Link to={`/coursedetails/${blog._id}`}>
-                                                            <img src={blog.image} alt={blog?.title} className="w-full lg:h-64" />
-                                                      </Link>
-                                                      <div className="p-4">
-                                                            <h2 className="font-medium text-gray-600 uppercase">{blog.category}</h2>
-                                                            <p className="text-gray-800 text-[22px] mt-2">{blog?.title}</p>
-                                                            <div className='flex items-center gap-14 mt-3 text-gray-600'>
-                                                                  <span className='flex items-center gap-2'>
-                                                                        <FaRegCalendarCheck size={17} className="text-[#23b792]" />
-                                                                        {new Date(blog?.submitDate).toLocaleDateString("en-US", {
-                                                                              day: "numeric",
-                                                                              month: "short",
-                                                                              year: "numeric"
-                                                                        })}
-                                                                  </span>
-
-                                                                  <span className='flex items-center gap-1'><PiStudentFill size={20} className="text-[#23b792]" />
-                                                                        {blog?.enrollmentCount} Students</span>
-                                                            </div>
-                                                            <p className="mt-3 text-gray-700">{blog?.description.slice(0, 58)}...</p>
-                                                      </div>
-                                                </div>
-                                          ))}
+                                          {course.map((blog) => <BlogCourse blog={blog} />)}
                                     </div>
                               </div>
 
-
-
-
-                              {/* Right Side (Fixed) */}
+                              {/* Right Side */}
                               <div className="lg:w-1/3 mt-4">
                                     {/* h-screen sticky top-20 */}
                                     <div>
@@ -85,11 +59,11 @@ const Blog = () => {
                                                 <h1 className="text-2xl tracking-wide font">Categories</h1>
                                                 <Categories />
                                           </div>
+                                          <div className="mt-10">
+                                                <img src="https://i.ibb.co.com/YFvL4Qc4/sidebar-ad.png" alt="img" className='w-full' />
+                                          </div>
                                     </div>
                               </div>
-
-
-
                         </div>
 
 

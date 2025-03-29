@@ -45,7 +45,7 @@ const CourseDetails = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
                                           <div className="rounded-xl shadow-lg">
                                                 {/* overflow-hidden */}
-                                                <img src={course.image} alt={course?.title} className="w-full lg:h-[470px]" />
+                                                <img src={course.image} alt={course?.title} className="w-full lg:h-[470px] rounded-t-xl" />
                                                 <div className="p-4">
                                                       <h2 className="font-medium text-gray-600 uppercase">{course.category}</h2>
                                                       <p className="text-gray-800 text-[22px] mt-2">{course?.title}</p>

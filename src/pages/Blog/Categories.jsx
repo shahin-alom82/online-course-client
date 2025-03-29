@@ -8,17 +8,17 @@ const Categories = () => {
       const courseCategory = [
             {
                   category: "Intermediate",
-                  path: 'intermediate',
+                  path: '/intermediate',
                   icon: <PiStudentDuotone size={25} />
             },
             {
                   category: "Advanced",
-                  path: 'advanced',
+                  path: '/advanced',
                   icon: <GrSearchAdvanced size={25} />
             },
             {
                   category: "Beginner",
-                  path: 'beginner',
+                  path: '/beginner',
                   icon: <LiaWpbeginner size={25} />
             }
       ]

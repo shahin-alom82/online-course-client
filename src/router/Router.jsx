@@ -17,6 +17,9 @@ import UpdateCourse from "../pages/Dashboard/Admin/UpdateCourse";
 import CourseDetails from "../pages/Course/CourseDetails";
 import Contact from "../pages/Contact";
 import Blog from "../pages/Blog/Blog";
+import IntermediateLevelCourse from "../pages/Blog/IntermediateLevelCourse";
+import BeginnerLevelCourse from "../pages/Blog/BeginnerLevelCourse";
+import AdvancedLevelCourse from "../pages/Blog/AdvancedLevelCourse";
 
 export const route = createBrowserRouter([
 
@@ -49,6 +52,20 @@ export const route = createBrowserRouter([
                         path: "/blog",
                         element: <Blog />
                   },
+
+                  {
+                        path: "/intermediate",
+                        element: <IntermediateLevelCourse />
+                  },
+                  {
+                        path: "/beginner",
+                        element: <BeginnerLevelCourse />
+                  },
+                  {
+                        path: "/advanced",
+                        element: <AdvancedLevelCourse />
+                  },
+
                   {
                         path: "/coursedetails/:id",
                         element: <CourseDetails />,

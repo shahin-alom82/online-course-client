@@ -147,7 +147,7 @@ const Heading = () => {
 
       return (
             <div className="fixed top-0 left-0 right-0 z-50 bg-white">
-                  <div className="flex items-center justify-between py-5 lg:max-w-screen-xl mx-auto lg:px-0 px-4">
+                  <div className="flex items-center justify-between py-4 lg:max-w-screen-xl mx-auto lg:px-0 px-4">
                         {/* Logo */}
                         <div>
                               <Link to={"/"}>
