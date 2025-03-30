@@ -7,7 +7,7 @@ const CourseCart = ({ course }) => {
 
       return (
             <div className='relative'>
-                  <img src={course?.image} alt="img" className='w-full h-40 rounded-lg' />
+                  <img src={course?.image} alt="img" className='w-full h-48 rounded-lg' />
                   <div className='px-4 bg-gray-100 py-4 rounded-b-lg'>
                         <h1 className='bg-[#ddf4f0] text-[#23b792] w-40 text-center py-1'>{course?.level} Level</h1>
                         <h1 className='text-lg mt-3 text-gray-800 font-medium'>{course?.title}</h1>

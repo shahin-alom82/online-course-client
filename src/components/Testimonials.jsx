@@ -7,6 +7,8 @@ import img3 from '../assets/testimonial-03.png'
 import { FaArrowRightLong } from 'react-icons/fa6';
 import '../components/testimonials.css'
 import { IoIosStar, IoIosStarHalf } from 'react-icons/io';
+import { PiQuotesLight } from 'react-icons/pi';
+import { RiDoubleQuotesR } from 'react-icons/ri';
 
 const Testimonials = () => {
 
@@ -53,22 +55,23 @@ const Testimonials = () => {
                               <p className='text-gray-700 mt-5 tracking-wide'>Our students share their inspiring journeys of growth and success. Discover how our courses have helped them <br /> build skills and confidence!</p>
                               <button className='flex items-center gap-2 bg-[#23b792] py-2 px-4 text-white mt-6'>View ALL<FaArrowRightLong /></button>
                         </div>
-                        <div className='lg:w-2/3 flex flex-col lg:flex-row gap-6'>
+                        <div className='lg:w-2/3 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-6'>
                               {
                                     testimonials.map((item, index) => (
-                                          <div key={index} className='bg-gray-100 w-80 rounded-t-md testimonials-bg-img'>
+                                          <div key={index} className='bg-gray-100 rounded-t-md testimonials-bg-img relative'>
                                                 <img src={item?.img} alt="img" className='rounded-full h-20 w-20 mt-14 ml-6' />
                                                 <div className='px-4 py-4 mt-4'>
                                                       <p className='text-gray-600'>{item?.description}</p>
                                                       <h1 className="flex items-center mt-4">
                                                             {Array(Math.floor(item?.rating)).fill(<IoIosStar className="text-yellow-500" />)}
                                                             {item?.rating % 1 !== 0 && (
-                                                                  <IoIosStarHalf className="text-yellow-500" size={30}/>
+                                                                  <IoIosStarHalf className="text-yellow-500" size={30} />
                                                             )}
                                                       </h1>
                                                       <h1 className='text-xl mt-2 font-medium'>{item?.name}</h1>
-                                                      <p className='text-gray-600 mt-2 mb-2'>{item?.title}</p>
+                                                      <p className='text-gray-600 mt-2 mb-2 text-sm'>{item?.title}</p>
                                                 </div>
+                                                <span className='border-2 bg-[#23b792] text-white border-white absolute py-1 px-1 top-28 left-20 rounded-full' ><RiDoubleQuotesR /></span>
                                           </div>
                                     ))
                               }

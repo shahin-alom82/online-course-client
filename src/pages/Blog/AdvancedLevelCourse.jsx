@@ -24,8 +24,8 @@ const AdvancedLevelCourse = () => {
                               {/* Header Section */}
                               <div className='mt-6'>
                                     <div className='flex mt-3 items-center gap-2 text-gray-600'>
-                                          <Link to={"/"}>
-                                                <h1 className="text-lg">Home</h1>
+                                          <Link to={"/blog"}>
+                                                <h1 className="text-lg">Blog</h1>
                                           </Link>
                                           <FaAngleRight />
                                           <h1 className="text-lg tracking-wide text-gray-800">Advanced level courses</h1>

@@ -6,12 +6,16 @@ import UserMenu from "./Menu/UserMenu";
 import React from 'react';
 import logo from '../../../assets/logo.png'
 import { ImProfile } from "react-icons/im";
+import { RiHome2Line } from "react-icons/ri";
+import { TfiHome } from "react-icons/tfi";
+import MenuStyle from "./Menu/MenuStyle";
+import { FiSearch } from "react-icons/fi";
 
 const Sidebar = () => {
       const [role] = useRole()
 
 
-   
+
       return (
             <div>
                   {/* Top Menu*/}
@@ -42,6 +46,22 @@ const Sidebar = () => {
                               role === 'user' && <UserMenu />
                         }
                   </nav>
+                  <div className="border-t-2 border-[#23b792] mt-6">
+                        <div className="mt-5">
+                              <NavLink
+                                    to={'/'}
+                                    className={({ isActive }) => `flex items-center gap-2 text-lg ${isActive ? "text-indigo-600" : ""}`}>
+                                    <TfiHome className="border py-1 text-2xl rounded-full" />
+                                    <span className='text-[17px] hidden md:block'>Home</span>
+                              </NavLink>
+                              <NavLink
+                                    to={'/course'}
+                                    className={({ isActive }) => `flex items-center gap-2 text-lg  mt-5${isActive ? "text-indigo-600" : ""}`}>
+                                    <FiSearch className="border py-1 text-2xl rounded-full" />
+                                    <span className='text-[17px] hidden md:block'>Course</span>
+                              </NavLink>
+                        </div>
+                  </div>
             </div>
       );
 };

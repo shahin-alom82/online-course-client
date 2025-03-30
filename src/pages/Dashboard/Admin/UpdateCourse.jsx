@@ -243,7 +243,7 @@ const UpdateCourse = () => {
                               <label className="block text-gray-700 font-medium">Course Description*</label>
                               <textarea
                                     {...register("description")}
-                                    className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+                                    className="w-full px-4 py-4 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
                                     rows="2"
                                     placeholder="Enter Course Description"
                                     required

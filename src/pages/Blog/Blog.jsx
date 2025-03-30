@@ -24,8 +24,6 @@ const Blog = () => {
                   setFilteredCourses([...course].reverse());
             }
       }, [searchTerm, course]);
-
-
       return (
             <Container className={'border-t-2 border-[#23b792] mt-[82px]'}>
                   <Helmet>

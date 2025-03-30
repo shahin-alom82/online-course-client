@@ -20,6 +20,8 @@ import Blog from "../pages/Blog/Blog";
 import IntermediateLevelCourse from "../pages/Blog/IntermediateLevelCourse";
 import BeginnerLevelCourse from "../pages/Blog/BeginnerLevelCourse";
 import AdvancedLevelCourse from "../pages/Blog/AdvancedLevelCourse";
+import ManageTeacher from "../pages/Dashboard/Admin/ManageTeacher";
+import UpdateTeacher from "../pages/Dashboard/Admin/UpdateTeacher";
 
 export const route = createBrowserRouter([
 
@@ -105,8 +107,17 @@ export const route = createBrowserRouter([
                         element: <AddTeacher />
                   },
                   {
+                        path: "manageteacher",
+                        element: <ManageTeacher />
+                  },
+                  {
                         path: "managecourse",
                         element: <ManageCourse />
+                  },
+                  {
+                        path: "teacher/:id",
+                        element: <UpdateTeacher />,
+                        loader: ({ params }) => fetch(`http://localhost:5000/teacher/${params?.id}`)
                   },
                   {
                         path: "update/:id",
