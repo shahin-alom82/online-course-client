@@ -13,7 +13,7 @@ const Instructors = () => {
                   </div>
                   <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8  mt-10'>
                         {
-                              teacher.slice(0, 6).map((item) => (
+                              teacher.slice(0, 4).map((item) => (
                                     <div key={item?._id} className="relative group overflow-hidden rounded-t-md">
                                           {/* Image */}
                                           <img
