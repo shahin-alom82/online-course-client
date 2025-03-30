@@ -61,22 +61,21 @@ const AddCourse = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Course Title */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Course Title*</label>
             <input
               {...register("title")}
-              className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+              type="text"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
               placeholder="Enter Course Title"
               required
-              type='text'
             />
+
           </div>
           {/* Price Input */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Price*</label>
             <input
               {...register("price")}
-              type="number"
-              className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+              type="text"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
               placeholder="Enter price"
               required
             />
@@ -88,22 +87,20 @@ const AddCourse = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Duration */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Duration*</label>
             <input
               {...register("duration")}
-              className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
-              placeholder="Enter Duration"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
               required
+              placeholder="Enter Duration"
               type='text'
             />
           </div>
           {/* Enrollment Count Input */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Enrollment Count*</label>
             <input
               {...register("enrollmentCount")}
-              type="number"
-              className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+              type="text"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
               placeholder="Enter Enroll Count"
               required
             />
@@ -115,10 +112,9 @@ const AddCourse = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Language */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Language*</label>
             <input
               {...register("language")}
-              className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
               placeholder="Enter Language"
               required
               type='text'
@@ -126,11 +122,10 @@ const AddCourse = () => {
           </div>
           {/* Lessons Input */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Lessons*</label>
             <input
               {...register("lessons")}
-              type="number"
-              className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+              type="text"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 appearance-none focus:border-[#23b792] focus:outline-none"
               placeholder="Enter Lessons"
               required
             />
@@ -142,10 +137,9 @@ const AddCourse = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Email */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Email*</label>
             <input
               {...register("email")}
-              className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
               placeholder="Enter Email"
               required
               type='email'
@@ -153,11 +147,10 @@ const AddCourse = () => {
           </div>
           {/* Date */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Date*</label>
             <input
               {...register("submitDate")}
               type="date"
-              className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
               placeholder="Enter date"
               required
             />
@@ -169,10 +162,9 @@ const AddCourse = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Category Select */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Select Category*</label>
             <select defaultValue={'default'}
               {...register("category")}
-              className="w-full px-3 py-2.5 border mt-2 border-gray-400 rounded placeholder:text-gray-700 text-gray-800 bg-white "
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full appearance-none mt-4 focus:border-[#23b792] focus:outline-none"
               required
             >
               <option value="Web Development">Web Development</option>
@@ -187,10 +179,9 @@ const AddCourse = () => {
           </div>
           {/* Level Select */}
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Select Level*</label>
             <select defaultValue={'default'}
               {...register("level")}
-              className="w-full px-3 py-2.5 border mt-2 border-gray-400 rounded placeholder:text-gray-700 text-gray-800 bg-white "
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full appearance-none mt-4 focus:border-[#23b792] focus:outline-none"
               required
             >
               <option value="Advanced">Advanced</option>
@@ -204,31 +195,29 @@ const AddCourse = () => {
         {/* 1 File Upload  Name*/}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className='w-full md:w-1/2'>
-            <label className="block text-gray-700 font-medium">Course Image</label>
             <input
               {...register("image")}
               required
               type="file"
-              className="w-full outline-none border border-gray-400 placeholder:text-gray-700 rounded mt-2 py-2 px-3"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
             />
           </div>
           <div className="w-full md:w-1/2">
-            <label className="block text-gray-700 font-medium">Instructor Name</label>
             <input
               {...register("instructorName")}
               required
+              placeholder='Enter Instructor Name'
               type="text"
-              className="w-full outline-none border border-gray-400 placeholder:text-gray-700 rounded mt-2 py-2 px-3"
+              className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
             />
           </div>
         </div>
 
         {/* Course Description */}
         <div>
-          <label className="block text-gray-700 font-medium">Course Description*</label>
           <textarea
             {...register("description")}
-            className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+            className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full resize-none mt-4 focus:border-[#23b792] focus:outline-none"
             rows="2"
             placeholder="Enter Course Description"
             required

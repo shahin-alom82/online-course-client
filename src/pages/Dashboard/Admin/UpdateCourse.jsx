@@ -63,14 +63,14 @@ const UpdateCourse = () => {
                   <DashboardTitle role={"Admin"} action={"Update Course"} />
                   <form className="mt-6 flex flex-col gap-2 max-w-screen-md text-[15px]" onSubmit={handleSubmit(onSubmit)}>
 
+
                         {/* Course Title & Price */}
                         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                               {/* Course Title */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Course Title*</label>
                                     <input
                                           {...register("title")}
-                                          className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                           placeholder="Enter Course Title"
                                           required
                                           type='text'
@@ -79,11 +79,10 @@ const UpdateCourse = () => {
                               </div>
                               {/* Price Input */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Price*</label>
                                     <input
                                           {...register("price")}
-                                          type="number"
-                                          className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+                                          type="text"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                           placeholder="Enter price"
                                           required
                                           defaultValue={price}
@@ -96,23 +95,21 @@ const UpdateCourse = () => {
                         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                               {/* Duration */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Duration*</label>
                                     <input
                                           {...register("duration")}
-                                          className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
-                                          placeholder="Enter Duration"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                           required
+                                          placeholder="Enter Duration"
                                           type='text'
                                           defaultValue={duration}
                                     />
                               </div>
                               {/* Enrollment Count Input */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Enrollment Count*</label>
                                     <input
                                           {...register("enrollmentCount")}
-                                          type="number"
-                                          className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+                                          type="text"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                           placeholder="Enter Enroll Count"
                                           required
                                           defaultValue={enrollmentCount}
@@ -125,10 +122,9 @@ const UpdateCourse = () => {
                         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                               {/* Language */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Language*</label>
                                     <input
                                           {...register("language")}
-                                          className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                           placeholder="Enter Language"
                                           required
                                           type='text'
@@ -137,11 +133,10 @@ const UpdateCourse = () => {
                               </div>
                               {/* Lessons Input */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Lessons*</label>
                                     <input
                                           {...register("lessons")}
-                                          type="number"
-                                          className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+                                          type="text"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 appearance-none focus:border-[#23b792] focus:outline-none"
                                           placeholder="Enter Lessons"
                                           required
                                           defaultValue={lessons}
@@ -154,10 +149,9 @@ const UpdateCourse = () => {
                         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                               {/* Email */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Email*</label>
                                     <input
                                           {...register("email")}
-                                          className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                           placeholder="Enter Email"
                                           required
                                           type='email'
@@ -166,11 +160,10 @@ const UpdateCourse = () => {
                               </div>
                               {/* Date */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Date*</label>
                                     <input
                                           {...register("submitDate")}
                                           type="date"
-                                          className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                           placeholder="Enter date"
                                           required
                                           defaultValue={submitDate}
@@ -183,33 +176,31 @@ const UpdateCourse = () => {
                         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                               {/* Category Select */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Select Category*</label>
                                     <select defaultValue={category}
                                           {...register("category")}
-                                          className="w-full px-3 py-2.5 border mt-2 border-gray-400 rounded placeholder:text-gray-700 text-gray-800 bg-white "
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full appearance-none mt-4 focus:border-[#23b792] focus:outline-none"
                                           required
                                     >
-                                          <option value="salad">Web Development</option>
-                                          <option value="pizza">Data Science</option>
-                                          <option value="soup">UI/UX Design</option>
-                                          <option value="dessert">Mobile Development</option>
-                                          <option value="drinks">Cyber Security</option>
-                                          <option value="drinks">Artificial Intelligence</option>
-                                          <option value="drinks">MERN Stack Development</option>
-                                          <option value="drinks">Cloud Computing</option>
+                                          <option value="Web Development">Web Development</option>
+                                          <option value="Data Science">Data Science</option>
+                                          <option value="UI/UX Design">UI/UX Design</option>
+                                          <option value="Mobile Development">Mobile Development</option>
+                                          <option value="Cyber Security">Cyber Security</option>
+                                          <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                          <option value="MERN Stack Development">MERN Stack Development</option>
+                                          <option value="Cloud Computing">Cloud Computing</option>
                                     </select>
                               </div>
                               {/* Level Select */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Select Level*</label>
                                     <select defaultValue={level}
                                           {...register("level")}
-                                          className="w-full px-3 py-2.5 border mt-2 border-gray-400 rounded placeholder:text-gray-700 text-gray-800 bg-white "
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full appearance-none mt-4 focus:border-[#23b792] focus:outline-none"
                                           required
                                     >
-                                          <option value="salad">Advanced</option>
-                                          <option value="pizza">Intermediate</option>
-                                          <option value="soup">Beginner</option>
+                                          <option value="Advanced">Advanced</option>
+                                          <option value="Intermediate">Intermediate</option>
+                                          <option value="Beginner">Beginner</option>
                                     </select>
                               </div>
                         </div>
@@ -218,32 +209,30 @@ const UpdateCourse = () => {
                         {/* 1 File Upload  Name*/}
                         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                               <div className='w-full md:w-1/2'>
-                                    <label className="block text-gray-700 font-medium">Course Image</label>
                                     <input
                                           {...register("image")}
                                           required
                                           type="file"
-                                          className="w-full outline-none border border-gray-400 placeholder:text-gray-700 rounded mt-2 py-2 px-3"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                     />
                               </div>
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Instructor Name</label>
                                     <input
                                           {...register("instructorName")}
                                           required
                                           defaultValue={instructorName}
+                                          placeholder='Enter Instructor Name'
                                           type="text"
-                                          className="w-full outline-none border border-gray-400 placeholder:text-gray-700 rounded mt-2 py-2 px-3"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                     />
                               </div>
                         </div>
 
                         {/* Course Description */}
                         <div>
-                              <label className="block text-gray-700 font-medium">Course Description*</label>
                               <textarea
                                     {...register("description")}
-                                    className="w-full px-4 py-4 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+                                    className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full resize-none mt-4 focus:border-[#23b792] focus:outline-none"
                                     rows="2"
                                     placeholder="Enter Course Description"
                                     required

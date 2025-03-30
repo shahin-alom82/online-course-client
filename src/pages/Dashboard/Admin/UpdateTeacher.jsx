@@ -55,15 +55,27 @@ const UpdateTeacher = () => {
                   <DashboardTitle role="Admin" action="Update Teacher" />
 
                   <form className="mt-6 flex flex-col gap-2 max-w-screen-md" onSubmit={handleSubmit(onSubmit)}>
-                        <div className="flex flex-col md:flex-row gap-4">
+                        {/* Teacher Name & Category */}
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                              {/* Course Title */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Teacher Name*</label>
-                                    <input {...register("teachername")} className="w-full px-3 py-2 border border-gray-400 rounded mt-2" placeholder="Enter Teacher Name" required defaultValue={teachername} type="text" />
+                                    <input
+                                          {...register("teachername")}
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
+                                          placeholder="Enter Teacher Name"
+                                          required
+                                          defaultValue={teachername}
+                                          type='text'
+                                    />
                               </div>
-
+                              {/* Category Select */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Select Category*</label>
-                                    <select defaultValue={category} {...register("category")} className="w-full px-3 py-2.5 border mt-2 border-gray-400 rounded text-gray-800 bg-white" required>
+                                    <select
+                                          defaultValue={category}
+                                          {...register("category")}
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full appearance-none mt-4 focus:border-[#23b792] focus:outline-none"
+                                          required
+                                    >
                                           <option value="Web Development">Web Development</option>
                                           <option value="Data Science">Data Science</option>
                                           <option value="UI/UX Design">UI/UX Design</option>
@@ -73,38 +85,69 @@ const UpdateTeacher = () => {
                                           <option value="MERN Stack Development">MERN Stack Development</option>
                                           <option value="Cloud Computing">Cloud Computing</option>
                                     </select>
+
                               </div>
                         </div>
 
-                        <div className="flex flex-col md:flex-row gap-4">
-                              <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Experience*</label>
-                                    <input {...register("experience")} className="w-full px-3 py-2 border border-gray-400 rounded mt-2" placeholder="Enter Experience" required defaultValue={experience} type="text" />
-                              </div>
 
+                        {/* Email & Experience */}
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                              {/* Experience */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Email*</label>
-                                    <input {...register("email")} type="email" className="w-full px-3 py-2 border border-gray-400 rounded mt-2" placeholder="Enter Email" required defaultValue={email} />
+                                    <input
+                                          {...register("experience")}
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
+                                          placeholder="Enter Experience"
+                                          required
+                                          defaultValue={experience}
+                                          type='text'
+                                    />
+                              </div>
+                              {/*Email */}
+                              <div className="w-full md:w-1/2">
+                                    <input
+                                          {...register("email")}
+                                          type="email"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
+                                          placeholder="Enter Email"
+                                          required
+                                          defaultValue={email}
+                                    />
                               </div>
                         </div>
 
-                        <div className="flex flex-col md:flex-row gap-4">
-                              <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Image Upload*</label>
-                                    <input {...register("image")} className="w-full px-3 py-2 border border-gray-400 rounded mt-2" required type="file" />
-                              </div>
 
+                        {/* image & Date */}
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                              {/* Email */}
                               <div className="w-full md:w-1/2">
-                                    <label className="block text-gray-700 font-medium">Date*</label>
-                                    <input {...register("date")} type="date" className="w-full px-3 py-2 border border-gray-400 rounded mt-2" required defaultValue={date} />
+                                    <input
+                                          {...register("image")}
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
+                                          placeholder="Image Upload"
+                                          required
+                                          type='file'
+                                    />
+                              </div>
+                              {/* Date */}
+                              <div className="w-full md:w-1/2">
+                                    <input
+                                          {...register("date")}
+                                          type="date"
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
+                                          placeholder="Enter date"
+                                          required
+                                          defaultValue={date}
+                                    />
                               </div>
                         </div>
 
+
+                        {/* Course Description */}
                         <div>
-                              <label className="block text-gray-700 font-medium">Course Description*</label>
                               <textarea
                                     {...register("description")}
-                                    className="w-full px-4 py-4 border border-gray-400 rounded mt-2"
+                                    className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full resize-none mt-4 focus:border-[#23b792] focus:outline-none"
                                     rows="4"
                                     placeholder="Enter Description"
                                     required

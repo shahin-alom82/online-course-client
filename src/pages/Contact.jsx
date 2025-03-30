@@ -94,7 +94,7 @@ const Contact = () => {
                                                       onChange={handleChange}
                                                       required
                                                       placeholder='Your Name *'
-                                                      className='outline-none border-b border-gray-400 py-3 text-gray-500 placeholder:text-gray-500'
+                                                      className='outline-none border-b border-gray-400 py-3 text-gray-500 placeholder:text-gray-500 focus:border-[#23b792] focus:outline-none'
                                                 />
                                                 <input
                                                       type="email"
@@ -103,7 +103,7 @@ const Contact = () => {
                                                       onChange={handleChange}
                                                       required
                                                       placeholder='Enter Your Email *'
-                                                      className='outline-none border-b border-gray-400 py-3 text-gray-500 placeholder:text-gray-500'
+                                                      className='outline-none border-b border-gray-400 py-3 text-gray-500 placeholder:text-gray-500 focus:border-[#23b792] focus:outline-none'
                                                 />
                                                 <input
                                                       type="text"
@@ -112,7 +112,7 @@ const Contact = () => {
                                                       onChange={handleChange}
                                                       required
                                                       placeholder='Subject *'
-                                                      className='outline-none border-b border-gray-400 py-3 text-gray-500 placeholder:text-gray-500'
+                                                      className='outline-none border-b border-gray-400 py-3 text-gray-500 placeholder:text-gray-500 focus:border-[#23b792] focus:outline-none'
                                                 />
                                                 <input
                                                       type="text"
@@ -121,7 +121,7 @@ const Contact = () => {
                                                       onChange={handleChange}
                                                       required
                                                       placeholder='Your Message *'
-                                                      className='outline-none border-b border-gray-400 py-3 text-gray-500 placeholder:text-gray-500'
+                                                      className='outline-none border-b border-gray-400 py-3 text-gray-500 placeholder:text-gray-500 focus:border-[#23b792] focus:outline-none'
                                                 />
                                                 <button
                                                       type="submit"

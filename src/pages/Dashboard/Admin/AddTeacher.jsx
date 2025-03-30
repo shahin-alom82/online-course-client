@@ -52,16 +52,13 @@ const AddTeacher = () => {
 
                   <div>
                         <form className="mt-6 flex flex-col text-[15px] gap-2 max-w-screen-md" onSubmit={handleSubmit(onSubmit)}>
-
-
                               {/* Teacher Name & Category */}
                               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                                     {/* Course Title */}
                                     <div className="w-full md:w-1/2">
-                                          <label className="block text-gray-700 font-medium">Teacher Name*</label>
                                           <input
                                                 {...register("teachername")}
-                                                className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+                                                className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                                 placeholder="Enter Teacher Name"
                                                 required
                                                 type='text'
@@ -69,21 +66,22 @@ const AddTeacher = () => {
                                     </div>
                                     {/* Category Select */}
                                     <div className="w-full md:w-1/2">
-                                          <label className="block text-gray-700 font-medium">Select Category*</label>
-                                          <select defaultValue={'default'}
+                                          <select
+                                                defaultValue={'default'}
                                                 {...register("category")}
-                                                className="w-full px-3 py-2.5 border mt-2 border-gray-400 rounded placeholder:text-gray-700 text-gray-800 bg-white "
+                                                className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full appearance-none mt-4 focus:border-[#23b792] focus:outline-none"
                                                 required
                                           >
                                                 <option value="Web Development">Web Development</option>
                                                 <option value="Data Science">Data Science</option>
                                                 <option value="UI/UX Design">UI/UX Design</option>
-                                                <option value="deMobile Development">Mobile Development</option>
+                                                <option value="Mobile Development">Mobile Development</option>
                                                 <option value="Cyber Security">Cyber Security</option>
                                                 <option value="Artificial Intelligence">Artificial Intelligence</option>
                                                 <option value="MERN Stack Development">MERN Stack Development</option>
                                                 <option value="Cloud Computing">Cloud Computing</option>
                                           </select>
+
                                     </div>
                               </div>
 
@@ -92,10 +90,9 @@ const AddTeacher = () => {
                               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                                     {/* Experience */}
                                     <div className="w-full md:w-1/2">
-                                          <label className="block text-gray-700 font-medium">Experience*</label>
                                           <input
                                                 {...register("experience")}
-                                                className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+                                                className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                                 placeholder="Enter Experience"
                                                 required
                                                 type='text'
@@ -103,11 +100,10 @@ const AddTeacher = () => {
                                     </div>
                                     {/*Email */}
                                     <div className="w-full md:w-1/2">
-                                          <label className="block text-gray-700 font-medium">Email*</label>
                                           <input
                                                 {...register("email")}
                                                 type="email"
-                                                className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+                                                className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                                 placeholder="Enter Email"
                                                 required
                                           />
@@ -119,10 +115,9 @@ const AddTeacher = () => {
                               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                                     {/* Email */}
                                     <div className="w-full md:w-1/2">
-                                          <label className="block text-gray-700 font-medium">Image Upload*</label>
                                           <input
                                                 {...register("image")}
-                                                className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+                                                className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                                 placeholder="Image Upload"
                                                 required
                                                 type='file'
@@ -130,11 +125,10 @@ const AddTeacher = () => {
                                     </div>
                                     {/* Date */}
                                     <div className="w-full md:w-1/2">
-                                          <label className="block text-gray-700 font-medium">Date*</label>
                                           <input
                                                 {...register("date")}
                                                 type="date"
-                                                className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 text-gray-700 rounded mt-2"
+                                                className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full mt-4 focus:border-[#23b792] focus:outline-none"
                                                 placeholder="Enter date"
                                                 required
                                           />
@@ -144,10 +138,9 @@ const AddTeacher = () => {
 
                               {/* Course Description */}
                               <div>
-                                    <label className="block text-gray-700 font-medium">Course Description*</label>
                                     <textarea
-                                          {...register("description")}
-                                          className="w-full px-3 py-2 border border-gray-400 outline-none placeholder:text-gray-700 rounded mt-2"
+                                          {...register("description")} 
+                                          className="outline-none border-b-2 border-gray-300 py-2 rounded-md px-2 text-gray-500 placeholder:text-gray-500 w-full resize-none mt-4 focus:border-[#23b792] focus:outline-none"
                                           rows="2"
                                           placeholder="Enter Description"
                                           required
@@ -159,7 +152,6 @@ const AddTeacher = () => {
                                     type="submit"
                                     className="mt-2 w-full bg-[#23b792] text-white rounded-full py-2 px-4 flex items-center gap-4 text-lg text-center justify-center"
                               >
-
                                     <SiConcourse size={18} />
                                     Add Teacher
                                     <SiConcourse size={18} />
