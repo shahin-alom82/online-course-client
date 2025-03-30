@@ -73,9 +73,10 @@ const Heading = () => {
                         {/* Login Button */}
                         {user ? (
                               <div onClick={() => handleLogout()} className="hidden md:block">
-                                    <button className="bg-red-400 py-1.5 px-3 flex items-center gap-1 text-[18px] text-white">
+                                    <button className="bg-[#23b792] py-1.5 cursor-pointer hover:bg-red-500 duration-300 px-3 flex items-center gap-1 text-[18px] text-white">
                                           Logout <LuLogOut />
                                     </button>
+                                    {/* <span className=""><img src={user?.photoURL} alt="img" className="h-12 w-12 border-2 border-[#23b792] rounded-full" /></span> */}
                               </div>
                         ) : (
                               <NavLink to={"/login"}>

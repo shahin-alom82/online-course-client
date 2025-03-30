@@ -9,7 +9,6 @@ import DashboardTitle from '../../components/Dashboard/Sidebar/DashboardTitle';
 const Profile = () => {
       const { user } = useContext(AuthContext)
       const [role] = useRole()
-
       return (
             <div>
                   <DashboardTitle role={role} action={"Profile"} />

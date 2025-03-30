@@ -3,8 +3,11 @@ import Container from '../components/Container';
 import { Link } from 'react-router-dom';
 import { FaAngleRight, FaArrowRightLong } from 'react-icons/fa6';
 import { Helmet } from 'react-helmet-async';
-import { FaFacebookSquare, FaInstagramSquare, FaYoutube, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaFacebookSquare, FaYoutube, FaTwitter, FaGithub } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { GrLocation } from 'react-icons/gr';
+import { AiOutlineMail } from "react-icons/ai";
+import { FiPhoneCall } from "react-icons/fi";
 
 const Contact = () => {
 
@@ -56,16 +59,19 @@ const Contact = () => {
                                                 <h1 className='mt-3'>Hear From You!</h1>
                                           </div>
                                           <div className='mt-4'>
-                                                <h1 className='text-[22px]'>Address</h1>
-                                                <p className='mt-2 text-gray-600'>Assim, Bashdi, Fulbaria, Mymensingh</p>
+                                                <h1 className='text-[22px]'>Address:</h1>
+                                                <p className='mt-2 text-gray-600 flex items-center gap-2'><GrLocation />
+                                                      Bashdi, Assim, Fulbaria, Mymensingh</p>
                                           </div>
                                           <div className='mt-3'>
-                                                <h1 className='text-[22px]'>Email</h1>
-                                                <p className='mt-2 text-gray-600'>shahinalom3511371@gmail.com</p>
+                                                <h1 className='text-[22px]'>Email:</h1>
+                                                <p className='mt-2 text-gray-600 flex items-center gap-2'><AiOutlineMail />
+                                                      shahinalom3511371@gmail.com</p>
                                           </div>
                                           <div className='mt-3'>
-                                                <h1 className='text-[22px]'>Phone</h1>
-                                                <p className='mt-2 text-gray-600'>(+088) 01682247291</p>
+                                                <h1 className='text-[22px]'>Phone:</h1>
+                                                <p className='mt-2 text-gray-600 flex items-center gap-2'><FiPhoneCall />
+                                                      +088 01682247291</p>
                                           </div>
                                           <div>
                                                 <div className='flex items-center gap-6 mt-4'>

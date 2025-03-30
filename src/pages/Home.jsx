@@ -16,8 +16,8 @@ const Home = () => {
                   <Banner />
                   <BottomBanner />
                   <AboutUs />
-                  <TopCategory />
                   <Testimonials />
+                  <TopCategory />
                   <Instructors />
             </div>
       );
