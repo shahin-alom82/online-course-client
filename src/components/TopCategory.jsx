@@ -35,15 +35,15 @@ const TopCategory = () => {
                               </div>
                               <div className="flex items-center justify-between gap-2 lg:w-[700px] mx-auto mt-2">
                                     {/* Left Border */}
-                                    <div className="flex-1 border-t-4 border-gray-600 animate-borderFade"></div>
+                                    {/* <div className="flex-1 border-t-4 border-gray-600 animate-borderFade"></div> */}
                                     {/* Center Circle */}
-                                    <div className="mx-2 flex items-center justify-center">
+                                    {/* <div className="mx-2 flex items-center justify-center">
                                           <h1 className="bg-[#23b792] py-4 px-4 text-white rounded-full text-sm font-semibold">
 
                                           </h1>
-                                    </div>
+                                    </div> */}
                                     {/* Right Border */}
-                                    <div className="flex-1 border-t-4 border-gray-600 animate-borderFade"></div>
+                                    {/* <div className="flex-1 border-t-4 border-gray-600 animate-borderFade"></div> */}
                               </div>
                         </div>
                         {/*Course Cart */}

@@ -4,29 +4,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-
-@keyframes borderFade {
-  0% {
-    border-color: rgb(255, 140, 0, 1);
-  }
-
-  40% {
-    border-color: rgb(0, 128, 0, 1);
-  }
-
-  70% {
-    border-color: rgb(0, 0, 255, 1);
-  }
-
-  100% {
-    border-color: rgba(0, 0, 255, 0.4);
-  }
-}
-
-.animate-borderFade {
-  animation: borderFade 2s ease-in-out infinite alternate;
-}
-
 .font {
   font-family: cursive
 }
