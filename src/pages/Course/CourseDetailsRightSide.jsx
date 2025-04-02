@@ -31,6 +31,7 @@ const CourseDetailsRightSide = ({ course }) => {
       };
 
       const stripePromise = loadStripe(import.meta.env.VITE_payment_gateway_pk)
+
       return (
             <div>
                   <h1 className='text-2xl'>Course Includes:</h1>
@@ -104,20 +105,24 @@ const CourseDetailsRightSide = ({ course }) => {
                         isOpen={isModalOpen}
                         onRequestClose={closeModal}
                         className="bg-white py-10 px-10 rounded-lg shadow-md mt-24 relative w-[600px]"
-                        overlayClassName="fixed inset-0 flex justify-center items-center bg-gray-600/70"
+                        overlayClassName="fixed inset-0 flex justify-center items-center bg-black/80"
                   >
                         <button
                               onClick={closeModal}
                               className="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-xl font-bold">
                               ✖
                         </button>
-                        <h2 className="text-2xl font-medium flex items-center gap-2 mb-4">
-                              <MdOutlinePayment size={30} /> Enter Payment Details
+
+                        <h2 className="lg:text-2xl text-gray-600 font-medium flex items-center gap-2 mb-4">
+                              <MdOutlinePayment size={35} /> <span>Enter Payment Details</span>
                         </h2>
+
                         <Elements stripe={stripePromise}>
                               <CheckoutForm />
                         </Elements>
+
                   </Modal>
+                  
             </div>
       );
 };
