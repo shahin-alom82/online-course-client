@@ -30,6 +30,7 @@ const Blog = () => {
                         <title>EduBlink | Blog</title>
                   </Helmet>
                   <div className="px-4 py-5">
+                        
                         {/* Header Section */}
                         <div className='mt-6'>
                               <div className='flex flex-col lg:justify-center lg:items-center lg:text-center'>
