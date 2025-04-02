@@ -16,9 +16,9 @@ const Home = () => {
                   <Banner />
                   <BottomBanner />
                   <AboutUs />
-                  <Testimonials />
                   <TopCategory />
                   <Instructors />
+                  <Testimonials />
             </div>
       );
 };

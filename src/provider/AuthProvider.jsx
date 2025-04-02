@@ -77,19 +77,6 @@ const AuthProvider = ({ children }) => {
 
 
 
-      // useEffect(() => {
-      //       const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      //             if (!currentUser) return;
-      //             setUser(currentUser)
-      //             saveUser(currentUser)
-      //             getToken(currentUser)
-      //             console.log('currentUser', currentUser)
-      //             setLoading(false);
-      //       });
-      //       return () => unSubscribe()
-      // }, [])
-
-
 
       useEffect(() => {
             const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -100,6 +87,7 @@ const AuthProvider = ({ children }) => {
                         console.log('currentUser', currentUser);
                         setLoading(false);
                   } else {
+                        localStorage.removeItem("token");
                         setUser(null);
                         setLoading(false);
                   }
