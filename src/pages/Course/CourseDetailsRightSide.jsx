@@ -10,13 +10,14 @@ import { LiaAwardSolid, LiaUserTieSolid } from "react-icons/lia";
 import { GrLanguage } from "react-icons/gr";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import CheckoutForm from "../Payments/CheckoutForm ";
 
 const CourseDetailsRightSide = ({ course }) => {
       const { user } = useContext(AuthContext);
       const [isModalOpen, setIsModalOpen] = useState(false);
-
       const navigate = useNavigate()
-
       const handleEnroll = () => {
             if (!user) {
                   return toast.success('Please Login Now!');
@@ -29,6 +30,7 @@ const CourseDetailsRightSide = ({ course }) => {
             setIsModalOpen(false);
       };
 
+      const stripePromise = loadStripe(import.meta.env.VITE_payment_gateway_pk)
       return (
             <div>
                   <h1 className='text-2xl'>Course Includes:</h1>
@@ -101,7 +103,7 @@ const CourseDetailsRightSide = ({ course }) => {
                   <Modal
                         isOpen={isModalOpen}
                         onRequestClose={closeModal}
-                        className="bg-white p-6 rounded-lg shadow-md mt-24 relative w-[600px]"
+                        className="bg-white py-10 px-10 rounded-lg shadow-md mt-24 relative w-[600px]"
                         overlayClassName="fixed inset-0 flex justify-center items-center bg-gray-600/70"
                   >
                         <button
@@ -112,11 +114,9 @@ const CourseDetailsRightSide = ({ course }) => {
                         <h2 className="text-2xl font-medium flex items-center gap-2 mb-4">
                               <MdOutlinePayment size={30} /> Enter Payment Details
                         </h2>
-                        <p className="text-lg text-gray-700"><strong>Instructor:</strong> {course?.instructorName}</p>
-                        <p className="text-lg text-gray-700"><strong>Duration:</strong> {course?.duration}</p>
-                        <p className="text-lg text-gray-700"><strong>Lessons:</strong> {course?.lessons}</p>
-                        <p className="text-lg text-gray-700"><strong>Language:</strong> {course?.language}</p>
-                        <p className="text-lg text-gray-700"><strong>Price:</strong> ${course?.price}</p>
+                        <Elements stripe={stripePromise}>
+                              <CheckoutForm />
+                        </Elements>
                   </Modal>
             </div>
       );
