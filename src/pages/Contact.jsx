@@ -42,7 +42,7 @@ const Contact = () => {
                         <div className='max-w-screen-lg mx-auto'>
                               <div className='mt-10'>
                                     <div className='flex flex-col lg:justify-center lg:items-center lg:text-center'>
-                                          <h1 className="text-4xl font">Contact Us</h1>
+                                          <h1 className="text-2xl uppercase">Contact Us</h1>
                                           <div className='flex mt-3 items-center gap-2 text-gray-600'>
                                                 <Link to={"/"}>
                                                       <h1 className="text-lg">Home</h1>

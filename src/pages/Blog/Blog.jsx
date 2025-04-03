@@ -32,9 +32,9 @@ const Blog = () => {
                   <div className="px-4 py-5">
                         
                         {/* Header Section */}
-                        <div className='mt-6'>
+                        <div className='mt-4'>
                               <div className='flex flex-col lg:justify-center lg:items-center lg:text-center'>
-                                    <h1 className="text-4xl font">Our Blog</h1>
+                                    <h1 className="text-2xl  uppercase">Our Blog</h1>
                                     <div className='flex mt-3 items-center gap-2 text-gray-600'>
                                           <Link to={"/"}>
                                                 <h1 className="text-lg">Home</h1>

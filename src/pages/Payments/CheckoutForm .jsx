@@ -1,15 +1,11 @@
 
 
-
-
-
-
-
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import useCourse from '../../hocks/useCourse';
 import useAxiosSecure from '../../hocks/useAxiosSecure';
 import toast from 'react-hot-toast';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const CheckoutForm = () => {
       const [clientSecret, setClientSecret] = useState('')
@@ -20,9 +16,25 @@ const CheckoutForm = () => {
       const axiosSecure = useAxiosSecure();
       const elements = useElements();
       const stripe = useStripe();
+      const { user } = useContext(AuthContext)
 
 
+      // Check if the user has already paid
+      //     useEffect(() => {
+      //       if (userEmail) {
+      //           axiosSecure.get(`/payments/check/${userEmail}`)
+      //               .then(res => {
+      //                   if (res.data?.paid) {
+      //                       setIsPaid(true);
+      //                   }
+      //               })
+      //               .catch(err => console.error(err));
+      //       }
+      //   }, [userEmail, axiosSecure]);
+
+      
       const totalPrice = course.reduce((total, item) => total + item.price, 0)
+      console.log('totalPrice', course, totalPrice)
 
       useEffect(() => {
             if (totalPrice > 0) {
@@ -45,8 +57,9 @@ const CheckoutForm = () => {
             }
 
             const card = elements.getElement(CardElement);
-            if (!card) {
-                  return;
+
+            if (card == null) {
+                  return
             }
 
             const { error, paymentMethod } = await stripe.createPaymentMethod({
@@ -59,10 +72,32 @@ const CheckoutForm = () => {
                   setError(error.message);
             } else {
                   console.log('Payment Method', paymentMethod);
-                  toast.success('Payment Successful!');
+                  // toast.success('Payment Successful!');
                   setError('');
                   setIsPaid(true);
             }
+
+
+            const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(clientSecret, {
+
+                  payment_method: {
+                        card: card,
+                        billing_details: {
+                              email: user?.email || 'anonymous',
+                        }
+                  }
+            })
+            // console.log('fgfdgfdgfdg'.paymentIntent)
+
+            if (confirmError) {
+                  console.log('confirm error')
+            }
+            else {
+                  console.log('payment intent', paymentIntent)
+            }
+
+
+
       };
 
       return (
@@ -93,6 +128,7 @@ const CheckoutForm = () => {
                               {isPaid ? "Already Paid" : "Pay"}
                         </button>
                         {error && <p className="text-red-500 mt-2">{error}</p>}
+                        {transactionId && <p className="text-green-600 mt-2 text-sm tracking-wide">Your Transaction id {transactionId}</p>}
                   </form>
             </div>
       );

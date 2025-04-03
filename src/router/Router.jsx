@@ -22,6 +22,7 @@ import BeginnerLevelCourse from "../pages/Blog/BeginnerLevelCourse";
 import AdvancedLevelCourse from "../pages/Blog/AdvancedLevelCourse";
 import ManageTeacher from "../pages/Dashboard/Admin/ManageTeacher";
 import UpdateTeacher from "../pages/Dashboard/Admin/UpdateTeacher";
+import InstructorsDetails from "../components/Instructors/InstructorsDetails";
 // import PrivateRoute from "../provider/PrivateRoute";
 
 export const route = createBrowserRouter([
@@ -68,7 +69,11 @@ export const route = createBrowserRouter([
                         path: "/advanced",
                         element: <AdvancedLevelCourse />
                   },
-
+                  {
+                        path: "/teacherdetails/:id",
+                        element: <InstructorsDetails />,
+                        loader: ({ params }) => fetch(`http://localhost:5000/teacher/${params.id}`)
+                  },
                   {
                         path: "/coursedetails/:id",
                         element: <CourseDetails />,

@@ -5,7 +5,7 @@ import { GiCheckMark } from 'react-icons/gi';
 import { LiaAwardSolid } from 'react-icons/lia';
 const AboutUs = () => {
       return (
-            <div className='mt-20 lg:mx-52'>
+            <div className='mt-28 lg:mx-52'>
                   <Container>
                         <div className='flex flex-col lg:flex-row justify-between gap-10 relative'>
                               <img src={aboutimg} alt="img" className='lg:h-[450px] rounded-lg' />

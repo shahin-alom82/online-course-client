@@ -118,7 +118,7 @@ const CourseDetailsRightSide = ({ course }) => {
                         </h2>
 
                         <Elements stripe={stripePromise}>
-                              <CheckoutForm />
+                              <CheckoutForm/>
                         </Elements>
 
                   </Modal>
