@@ -28,7 +28,7 @@ const InstructorsDetails = () => {
                         </div>
 
                         {/* Instructor Details */}
-                        <div className="mt-12 flex flex-col lg:flex-row items-center lg:items-start gap-10">
+                        <div className="mt-[108px] flex flex-col lg:flex-row items-center lg:items-start gap-10">
                               {/* Instructor Image & Social Links */}
                               <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 flex flex-col items-center">
                                     <img
