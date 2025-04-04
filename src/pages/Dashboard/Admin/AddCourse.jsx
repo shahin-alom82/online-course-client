@@ -26,7 +26,7 @@ const AddCourse = () => {
     if (res.data.success) {
       const menuItem = {
         title: data?.title,
-        price: data?.price,
+        price: parseFloat(data?.price),
         duration: data?.duration,
         instructorName: data?.instructorName,
         image: res?.data?.data?.display_url,
@@ -38,8 +38,6 @@ const AddCourse = () => {
         level: data?.level,
         category: data?.category,
         description: data?.description,
-
-        // instructorImage: res?.data?.data?.display_url,
       }
       const menuRes = await axiosSecure.post('/course', menuItem);
 

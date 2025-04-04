@@ -62,7 +62,7 @@ const CourseDetails = () => {
                                                             <span className='flex items-center gap-1'><PiStudentFill size={20} className="text-[#23b792]" />
                                                                   {course?.enrollmentCount} Students</span>
                                                       </div>
-                                                      <p className="mt-3 text-gray-700">{course?.description.slice(0, 80)}...</p>
+                                                      <p className="mt-3 text-gray-700">{course?.description?.slice(0, 80)}...</p>
                                                 </div>
                                           </div>
                                     </div>

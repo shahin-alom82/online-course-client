@@ -1,5 +1,3 @@
-
-
 import toast from "react-hot-toast";
 import React, { useContext, useState } from 'react';
 import Modal from 'react-modal';
@@ -14,10 +12,14 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "../Payments/CheckoutForm ";
 
+const stripePromise = loadStripe(import.meta.env.VITE_payment_gateway_pk)
+
+
 const CourseDetailsRightSide = ({ course }) => {
       const { user } = useContext(AuthContext);
       const [isModalOpen, setIsModalOpen] = useState(false);
       const navigate = useNavigate()
+
       const handleEnroll = () => {
             if (!user) {
                   return toast.success('Please Login Now!');
@@ -29,8 +31,6 @@ const CourseDetailsRightSide = ({ course }) => {
       const closeModal = () => {
             setIsModalOpen(false);
       };
-
-      const stripePromise = loadStripe(import.meta.env.VITE_payment_gateway_pk)
 
       return (
             <div>
@@ -118,11 +118,11 @@ const CourseDetailsRightSide = ({ course }) => {
                         </h2>
 
                         <Elements stripe={stripePromise}>
-                              <CheckoutForm/>
+                              <CheckoutForm />
                         </Elements>
 
                   </Modal>
-                  
+
             </div>
       );
 };

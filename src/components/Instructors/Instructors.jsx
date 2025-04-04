@@ -5,12 +5,14 @@ import { IoShareSocialSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
 const Instructors = () => {
+
       const [teacher] = useTeacher()
+
       return (
             <Container>
                   <div className='mt-20 items-center justify-center text-center mx-auto'>
                         <p className='text-gray-600'>INSTRUCTORS</p>
-                        <h1 className='text-4xl mt-3 text-gray-800'>Course Instructors</h1>
+                        <h1 className='text-4xl font-semibold uppercase text-gray-800 mt-4'>Course Instructors</h1>
                   </div>
                   <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8  mt-10'>
                         {

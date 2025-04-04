@@ -32,21 +32,19 @@ const CheckoutForm = () => {
       //       }
       //   }, [userEmail, axiosSecure]);
 
-      
+
       const totalPrice = course.reduce((total, item) => total + item.price, 0)
-      console.log('totalPrice', course, totalPrice)
+      console.log('totalPrice', totalPrice)
 
       useEffect(() => {
             if (totalPrice > 0) {
                   axiosSecure.post('/create-payment-intent', { price: totalPrice })
                         .then(res => {
-                              console.log('data', res.data)
+                              console.log('res.data.clientSecret', res.data.clientSecret)
                               setClientSecret(res?.data?.clientSecret)
                         })
             }
       }, [axiosSecure, totalPrice])
-
-
 
 
       const handleSubmit = async (event) => {
@@ -77,27 +75,20 @@ const CheckoutForm = () => {
                   setIsPaid(true);
             }
 
-
             const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(clientSecret, {
-
                   payment_method: {
                         card: card,
                         billing_details: {
-                              email: user?.email || 'anonymous',
+                              email: user?.email || 'anonymous'
                         }
                   }
             })
-            // console.log('fgfdgfdgfdg'.paymentIntent)
-
             if (confirmError) {
                   console.log('confirm error')
             }
             else {
                   console.log('payment intent', paymentIntent)
             }
-
-
-
       };
 
       return (

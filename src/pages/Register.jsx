@@ -13,6 +13,9 @@ import axios from 'axios';
 const Register = () => {
       const [showPassword, setShowPassword] = useState(false);
       const { createUser, updateUserProfile } = useContext(AuthContext)
+
+      // Replace
+      const from = location.state?.from?.pathName || "/"
       const navigate = useNavigate()
 
       const handleRegister = async e => {
@@ -32,7 +35,7 @@ const Register = () => {
                   await createUser(email, password);
                   updateUserProfile(name, imageUrl);
                   form.reset();
-                  navigate('/')
+                  navigate(from, { replace: true })
                   toast.success('Register Successfully!')
             } catch (error) {
                   toast.error('Register Error !')

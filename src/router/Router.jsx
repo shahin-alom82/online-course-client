@@ -23,7 +23,6 @@ import AdvancedLevelCourse from "../pages/Blog/AdvancedLevelCourse";
 import ManageTeacher from "../pages/Dashboard/Admin/ManageTeacher";
 import UpdateTeacher from "../pages/Dashboard/Admin/UpdateTeacher";
 import InstructorsDetails from "../components/Instructors/InstructorsDetails";
-// import PrivateRoute from "../provider/PrivateRoute";
 
 export const route = createBrowserRouter([
 
