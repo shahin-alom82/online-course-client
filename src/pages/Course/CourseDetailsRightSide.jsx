@@ -22,8 +22,8 @@ const CourseDetailsRightSide = ({ course }) => {
 
       const handleEnroll = () => {
             if (!user) {
-                  return toast.success('Please Login Now!');
-                  // return navigate('/login')
+                  // return toast.success('Please Login Now!');
+                  return navigate('/login')
             }
             setIsModalOpen(true);
       };

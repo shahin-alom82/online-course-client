@@ -3,23 +3,26 @@
 
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React, { useContext, useEffect, useState } from "react";
-import useCourse from "../../hocks/useCourse";
 import useAxiosSecure from "../../hocks/useAxiosSecure";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../provider/AuthProvider";
-import Swal from 'sweetalert2';
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const CheckoutForm = () => {
       const [clientSecret, setClientSecret] = useState("");
       const [transactionId, setTransactionId] = useState("");
       const [error, setError] = useState("");
-      const [course, , refetch] = useCourse();
+      const [isPaid, setIsPaid] = useState(false);
       const axiosSecure = useAxiosSecure();
       const elements = useElements();
       const stripe = useStripe();
       const { user } = useContext(AuthContext);
+      const navigate = useNavigate()
 
-      const totalPrice = course.reduce((total, item) => total + item.price, 0);
+      // Find Data
+      const coursepayment = useLoaderData()
+      // Price Formate
+      const totalPrice = coursepayment?.price || 0;
 
       // Payment Intent
       useEffect(() => {
@@ -32,6 +35,7 @@ const CheckoutForm = () => {
             }
       }, [axiosSecure, totalPrice]);
 
+
       const handleSubmit = async (event) => {
             event.preventDefault();
             if (!stripe || !elements) return;
@@ -40,7 +44,7 @@ const CheckoutForm = () => {
             if (!card) return;
 
             // Payment Method 
-            const { error, paymentMethod } = await stripe.createPaymentMethod({
+            const { error } = await stripe.createPaymentMethod({
                   type: "card",
                   card,
             });
@@ -49,10 +53,8 @@ const CheckoutForm = () => {
                   setError(error.message);
                   return;
             }
-            else {
-                  console.log('Payment Method', paymentMethod)
-                  setError('')
-            }
+
+            setError("");
 
             // Payment Confirm 
             const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(clientSecret, {
@@ -72,19 +74,24 @@ const CheckoutForm = () => {
             if (paymentIntent.status === "succeeded") {
                   setTransactionId(paymentIntent.id);
                   setIsPaid(true);
+
                   // Payment Data Backend
                   const payment = {
                         price: totalPrice,
                         transactionsId: paymentIntent.id,
+                        course: coursepayment,
                         email: user.email,
                         date: new Date(),
                         status: "Pending",
                   };
+
                   const res = await axiosSecure.post("/payments", payment);
                   if (res.data?.paymentResult?.insertedId) {
-                        toast.success('payments')
+                        toast.success("Payment successful!");
+                  } else if (res.data?.alreadyPaid) {
+                        alert("You have already paid for this course and cannot purchase it again.");
                   }
-                  refetch();
+                  navigate('/dashboard/paymentshistory')
             }
       };
 
@@ -105,10 +112,12 @@ const CheckoutForm = () => {
                               className="p-3 border-2 rounded border-[#23b792] focus:outline-none focus:ring mb-4"
                         />
                         <button
+                              disabled={!stripe || isPaid}
                               type="submit"
-                              className={`bg-[#23b792] text-white w-full py-2 rounded-full mt-3 text-xl font`}
+                              className={`bg-[#23b792] text-white w-full py-2 rounded-full mt-3 text-xl font ${isPaid ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+                                    }`}
                         >
-                              pay
+                              {isPaid ? "Already Paid" : "Pay"}
                         </button>
                         {error && <p className="text-red-500 mt-2">{error}</p>}
                         {transactionId && (
@@ -122,6 +131,11 @@ const CheckoutForm = () => {
 };
 
 export default CheckoutForm;
+
+
+
+
+
 
 
 

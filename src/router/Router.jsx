@@ -23,6 +23,8 @@ import AdvancedLevelCourse from "../pages/Blog/AdvancedLevelCourse";
 import ManageTeacher from "../pages/Dashboard/Admin/ManageTeacher";
 import UpdateTeacher from "../pages/Dashboard/Admin/UpdateTeacher";
 import InstructorsDetails from "../components/Instructors/InstructorsDetails";
+import PaymentHistory from "../pages/Dashboard/User/PaymentHistory";
+import CourseAccess from "../pages/Dashboard/User/CourseAccess";
 
 export const route = createBrowserRouter([
 
@@ -87,10 +89,8 @@ export const route = createBrowserRouter([
             path: "dashboard",
             element: <DashboardLayout />,
             children: [
-                  {
-                        path: "userhome",
-                        element: <UserHome />
-                  },
+
+                  // Admin Data
                   {
                         path: "adminhome",
                         element: <AdminHome />
@@ -129,6 +129,21 @@ export const route = createBrowserRouter([
                         element: <UpdateCourse />,
                         loader: ({ params }) => fetch(`http://localhost:5000/course/${params?.id}`)
                   },
+
+                  // User Data
+                  {
+                        path: "userhome",
+                        element: <UserHome />
+                  },
+                  {
+                        path: "paymentshistory",
+                        element: <PaymentHistory />
+                  },
+                  {
+                        path: "courseaccess",
+                        element: <CourseAccess />
+                  },
+
             ]
       }
 ])
