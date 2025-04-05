@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider';
-import { FaBasketShopping, FaSackDollar } from 'react-icons/fa6';
+import { FaSackDollar } from 'react-icons/fa6';
 import useAxiosSecure from '../../../hocks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { GiTeamIdea } from "react-icons/gi";
-import { BsFillCartCheckFill } from "react-icons/bs";
 import { SiConcourse } from 'react-icons/si';
 
 const UserHome = () => {
