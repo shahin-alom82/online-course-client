@@ -19,24 +19,14 @@ const CourseAccess = () => {
       const { data: payments = [], isLoading, isError } = useQuery({
             queryKey: ["payments", user?.email],
             queryFn: async () => {
-                  const res = await axiosSecure.get(`/payments`);
+                  const res = await axiosSecure.get(`/payments/${user?.email}`);
                   return res.data;
             },
       });
 
-
       return (
             <div>
-                  <div className='flex justify-between items-center'>
-                        <DashboardTitle role={"User"} action={"Course Access"} />  {
-                              payments.map((item) => (
-                                    <div key={item?._id} className='lg:flex items-center gap-3 text-xl text-[#23b792] hidden md:block'>
-                                          <h1>Student ID: </h1>
-                                          <h1 className='uppercase'>{item?.transactionsId.slice(3, 9)}</h1>
-                                    </div>
-                              ))
-                        }
-                  </div>
+                  <DashboardTitle role={"User"} action={"Course Access"} />
                   <div className='mt-10'>
                         {
                               payments.map((item) => (

@@ -11,7 +11,7 @@ const PaymentHistory = () => {
       const { data: payments = [], isLoading, isError } = useQuery({
             queryKey: ["payments", user?.email],
             queryFn: async () => {
-                  const res = await axiosSecure.get(`/payments`);
+                  const res = await axiosSecure.get(`/payments/${user?.email}`);
                   return res.data;
             },
       });
@@ -32,9 +32,9 @@ const PaymentHistory = () => {
                         </div>
 
                         {/* Payment List */}
-                        <div className="overflow-y-auto max-h-80 border border-gray-200 rounded-b-xl">
+                        <div className="overflow-y-auto max-h-[305px] border border-gray-200 rounded-b-xl">
                               {payments.map((item) => (
-                                    <div key={item?._id} className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center py-4 px-6 border-b last:border-none">
+                                    <div key={item?._id} className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center py-4 px-6 border-b border-gray-200 last:border-none">
                                           {/* User Email */}
                                           <p className="text-gray-800 font-medium text-[15px] lg:text-lg break-all">
                                                 {item?.email}
@@ -52,7 +52,7 @@ const PaymentHistory = () => {
                                           </p>
 
                                           {/* Payment Status */}
-                                          <p className={`text-sm lg:text-base font-medium text-gray-600 lg:ml-8 `}>
+                                          <p className={`text-sm lg:text-base font-medium text-gray-600 lg:ml-10 `}>
                                                 {item?.status}
                                           </p>
                                     </div>
