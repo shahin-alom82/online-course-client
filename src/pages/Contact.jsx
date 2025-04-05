@@ -41,7 +41,7 @@ const Contact = () => {
                   <Container className='border-t-2 border-[#23b792] gap-10'>
                         <div className='max-w-screen-lg mx-auto'>
                               <div className='mt-10'>
-                                    <div className='flex flex-col lg:justify-center lg:items-center lg:text-center'>
+                                    <div className='flex flex-col  lg:justify-center lg:items-center lg:text-center'>
                                           <h1 className="text-2xl uppercase">Contact Us</h1>
                                           <div className='flex mt-3 items-center gap-2 text-gray-600'>
                                                 <Link to={"/"}>
@@ -54,11 +54,11 @@ const Contact = () => {
                               </div>
                               <div className='flex flex-col lg:flex-row justify-between mt-10'>
                                     <div className='space-y-4 text-gray-800'>
-                                          <div className='text-3xl font-medium space-y-1'>
+                                          <div className='text-3xl font font-semibold space-y-1'>
                                                 <h1>We're Always Eager to</h1>
-                                                <h1 className='mt-3'>Hear From You!</h1>
+                                                <h1 className='mt-3 '>Hear <span className='text-[#ee4a62]'>From You!</span></h1>
                                           </div>
-                                          <div className='mt-4'>
+                                          <div className='mt-6'>
                                                 <h1 className='text-[22px]'>Address:</h1>
                                                 <p className='mt-2 text-gray-600 flex items-center gap-2'><GrLocation />
                                                       Bashdi, Assim, Fulbaria, Mymensingh</p>
@@ -89,8 +89,8 @@ const Contact = () => {
 
                                     <div className='mt-16 lg:mt-0'>
                                           <div className='text-gray-800'>
-                                                <h1 className='text-3xl'>Get In Touch</h1>
-                                                <p className='mt-2 text-gray-600'>Fill out this form for booking a consultant advising session.</p>
+                                                <h1 className='text-3xl font font-semibold'>Get In <span className=''>Touch</span></h1>
+                                                <p className='mt-3 text-gray-600'>Fill out this form for booking a consultant advising session.</p>
                                           </div>
                                           <form onSubmit={handleSubmit} className='flex flex-col gap-4 mt-4'>
                                                 <input
