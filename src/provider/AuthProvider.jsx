@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import { app } from '../firebase/firebase.config';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import axios from 'axios';
+import useAxiosPublic from '../hocks/useAxiosPublic';
 
 
 export const AuthContext = createContext(null);
@@ -9,7 +10,7 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider()
 
 const AuthProvider = ({ children }) => {
-
+      const axiosPublic = useAxiosPublic()
 
       const [user, setUser] = useState(null);
       const [loading, setLoading] = useState(false);
@@ -59,7 +60,7 @@ const AuthProvider = ({ children }) => {
                   role: user?.role || 'user',
                   status: 'verify'
             }
-            const { data } = await axios.put('http://localhost:5000/users', currentUser)
+            const { data } = await axiosPublic.put('/users', currentUser)
             // console.log('data', data)
             return data;
       }
@@ -67,7 +68,7 @@ const AuthProvider = ({ children }) => {
 
       const getToken = async (user) => {
             const email = user?.email;
-            const { data } = await axios.post('http://localhost:5000/jwt', email)
+            const { data } = await axiosPublic.post('/jwt', email)
             if (data.token) {
                   console.log('token', data?.token)
                   localStorage.setItem('token', data?.token)

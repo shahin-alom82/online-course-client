@@ -19,7 +19,7 @@ const AdvancedLevelCourse = () => {
       }, [course]);
       return (
             <div>
-                  <Container className={'border-t-2 border-[#23b792] mt-[82px]'}>
+                  <Container className={'border-t-2 border-[#23b792] lg:mt-[135px] mt-[85px]'}>
                         <div className="px-4 py-5">
                               {/* Header Section */}
                               <div className='mt-6'>

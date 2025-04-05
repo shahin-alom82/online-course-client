@@ -73,12 +73,12 @@ export const route = createBrowserRouter([
                   {
                         path: "/teacherdetails/:id",
                         element: <InstructorsDetails />,
-                        loader: ({ params }) => fetch(`http://localhost:5000/teacher/${params.id}`)
+                        loader: ({ params }) => fetch(`https://edublinkserver.vercel.app/teacher/${params.id}`)
                   },
                   {
                         path: "/coursedetails/:id",
                         element: <CourseDetails />,
-                        loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
+                        loader: ({ params }) => fetch(`https://edublinkserver.vercel.app/course/${params.id}`)
                   },
             ]
       },
@@ -122,12 +122,12 @@ export const route = createBrowserRouter([
                   {
                         path: "teacher/:id",
                         element: <UpdateTeacher />,
-                        loader: ({ params }) => fetch(`http://localhost:5000/teacher/${params?.id}`)
+                        loader: ({ params }) => fetch(`https://edublinkserver.vercel.app/teacher/${params?.id}`)
                   },
                   {
                         path: "update/:id",
                         element: <UpdateCourse />,
-                        loader: ({ params }) => fetch(`http://localhost:5000/course/${params?.id}`)
+                        loader: ({ params }) => fetch(`https://edublinkserver.vercel.app/course/${params?.id}`)
                   },
 
                   // User Data
