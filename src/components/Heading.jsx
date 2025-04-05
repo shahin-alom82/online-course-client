@@ -1,21 +1,23 @@
-
-
-
-
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { LuLogIn, LuLogOut } from "react-icons/lu";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import useRole from "../hocks/useRole";
+import TopHeading from "./TopHeading";
+import { MdLogout } from "react-icons/md";
+import { FaRegUser, FaUser } from "react-icons/fa6";
+import { BsFillCartCheckFill } from "react-icons/bs";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const Heading = () => {
+      const [isMenuOpen, setIsMenuOpen] = useState(false);
       const { user, logOut } = useContext(AuthContext);
       const [role] = useRole();
 
-      // Nav
+      // Nav items
       const nav = [
             { title: "Home", path: "/" },
             { title: "Course", path: "/course" },
@@ -23,7 +25,7 @@ const Heading = () => {
             { title: "Contact", path: "/contact" },
       ];
 
-      // User & Role Condition
+      // Add Dashboard link based on user role
       if (user) {
             if (role === "admin") {
                   nav.push({ title: "Dashboard", path: "/dashboard/adminhome" });
@@ -32,7 +34,7 @@ const Heading = () => {
             }
       }
 
-      // Log Out
+      // Log out functionality
       const handleLogout = async () => {
             try {
                   await logOut();
@@ -44,6 +46,8 @@ const Heading = () => {
 
       return (
             <div className="fixed top-0 left-0 right-0 z-50 bg-white">
+                  <TopHeading />
+
                   <div className="flex items-center justify-between py-4 lg:max-w-screen-xl mx-auto lg:px-0 px-4">
                         {/* Logo */}
                         <div>
@@ -52,31 +56,36 @@ const Heading = () => {
                               </Link>
                         </div>
 
-                        {/* Nav item */}
-                        <div className="md:flex items-center gap-x-10 hidden md:block">
+                        {/* Desktop Navigation */}
+                        <div className="lg:flex items-center gap-x-10 hidden md:block">
                               {nav.map((item, index) => (
-                                    <div key={index}>
+                                    <div key={index} className="relative group">
                                           <NavLink
-                                                className={({ isActive }) =>
-                                                      isActive
-                                                            ? "text-[#23b792] text-[18px] font-medium"
-                                                            : "text-gray-800 text-[18px] font-medium"
-                                                }
                                                 to={item?.path}
+                                                className={({ isActive }) =>
+                                                      (isActive
+                                                            ? "text-[#23b792]"
+                                                            : "text-gray-800") +
+                                                      " text-[18px] font-medium relative"
+                                                }
                                           >
                                                 {item?.title}
+                                                {/* underline */}
+                                                <span
+                                                      className={`absolute left-0 -bottom-1 h-[1.5px] w-0 bg-[#23b792] transition-all duration-300 group-hover:w-full`}
+                                                ></span>
                                           </NavLink>
                                     </div>
                               ))}
+
                         </div>
 
-                        {/* Login Button */}
+                        {/* Login / Logout Button */}
                         {user ? (
                               <div onClick={() => handleLogout()} className="hidden md:block">
                                     <button className="bg-[#23b792] py-1.5 cursor-pointer hover:bg-red-500 duration-300 px-3 flex items-center gap-1 text-[18px] text-white">
                                           Logout <LuLogOut />
                                     </button>
-                                    {/* <span className=""><img src={user?.photoURL} alt="img" className="h-12 w-12 border-2 border-[#23b792] rounded-full" /></span> */}
                               </div>
                         ) : (
                               <NavLink to={"/login"}>
@@ -88,11 +97,53 @@ const Heading = () => {
                               </NavLink>
                         )}
 
-                        {/* Mobile Menu */}
+                        {/* Mobile Menu Icon */}
                         <div className="md:hidden block">
-                              <IoClose size={30} />
+                              {isMenuOpen ? (
+                                    <button onClick={() => setIsMenuOpen(false)}>
+                                          <IoClose size={30} />
+                                    </button>
+                              ) : (
+                                    <button onClick={() => setIsMenuOpen(true)}>
+                                          <IoMenuSharp size={30} />
+
+                                    </button>
+                              )}
                         </div>
+
                   </div>
+
+                  {/* Mobile Menu */}
+                  {isMenuOpen && (
+                        <div className="flex flex-col py-4  items-start gap-5 px-5 border-t-2 border-[#23b792] ">
+                              {nav.map((item, index) => (
+                                    <div className="">
+                                          <Link
+                                                key={index}
+                                                to={item.path}
+                                                className="text-lg tracking-wide"
+                                                onClick={() => setIsMenuOpen(false)}
+                                          >
+                                                {item.title}
+                                          </Link>
+                                    </div>
+                              ))}
+                              <hr className="border-gray-700 w-full my-3" />
+                              {user ? (
+                                    <button
+                                          onClick={handleLogout}
+                                          className="flex items-center gap-2 text-lg hover:text-rose-500"
+                                    >
+                                          Logout <MdLogout size={20} className="text-red-500" />
+                                    </button>
+                              ) : (
+                                    <Link to={"/login"} className="flex items-center gap-2 text-lg">
+                                          <FaRegUserCircle size={20} />
+                                          Login / Register
+                                    </Link>
+                              )}
+                        </div>
+                  )}
             </div>
       );
 };

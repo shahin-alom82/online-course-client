@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import CourseFilter from './CourseFilter';
 
 const Course = () => {
-      
+
       const [course] = useCourse();
 
       const [selectedCategory, setSelectedCategory] = useState("");
@@ -27,7 +27,7 @@ const Course = () => {
       });
 
       return (
-            <div className='mt-[82px]'>
+            <div className='lg:mt-[135px] mt-[85px]'>
                   <Container className='border-t-2 border-[#23b792]'>
                         <Helmet>
                               <title>EduBlink | Course</title>

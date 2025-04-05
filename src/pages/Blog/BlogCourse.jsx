@@ -4,7 +4,7 @@ import { PiStudentFill } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
 
 const BlogCourse = ({ blog }) => {
-      
+
       return (
             <div key={blog._id} className="rounded-xl shadow-lg">
                   {/* overflow-hidden */}

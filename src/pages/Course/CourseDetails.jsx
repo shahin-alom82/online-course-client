@@ -17,7 +17,7 @@ const CourseDetails = () => {
       // console.log('details', details)
       return (
             <div>
-                  <Container className={'border-t-2 border-[#23b792] mt-[82px]'}>
+                  <Container className={'border-t-2 border-[#23b792] lg:mt-[135px] mt-[85px]'}>
                         <Helmet>
                               <title>EduBlink | Details</title>
                         </Helmet>

@@ -36,7 +36,7 @@ const CourseDetailsRightSide = ({ course }) => {
             <div>
                   <h1 className='text-2xl'>Course Includes:</h1>
 
-                  <div className="mt-4 text-lg text-gray-700 bg-white p-5 rounded-lg space-y-2">
+                  <div className="mt-2 text-lg text-gray-700 bg-white p-5 rounded-lg space-y-2">
                         <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                               <h1 className="flex items-center gap-3">
                                     <FaSackDollar size={18} className="text-green-500" /> Price:

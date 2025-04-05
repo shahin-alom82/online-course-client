@@ -25,7 +25,7 @@ const Blog = () => {
             }
       }, [searchTerm, course]);
       return (
-            <Container className={'border-t-2 border-[#23b792] mt-[82px]'}>
+            <Container className={'border-t-2 border-[#23b792] lg:mt-[135px] mt-[85px]'}>
                   <Helmet>
                         <title>EduBlink | Blog</title>
                   </Helmet>

@@ -15,7 +15,7 @@ const InstructorsDetails = () => {
                   <Helmet>
                         <title>EduBlink | Details</title>
                   </Helmet>
-                  <Container className="border-t-2 border-[#23b792] mt-[92px]">
+                  <Container className="border-t-2 border-[#23b792] lg:mt-[135px] mt-[85px]">
                         {/* Breadcrumb */}
                         <div className="mt-8 hidden md:block">
                               <div className="flex mt-3 items-center gap-2 text-gray-600">
