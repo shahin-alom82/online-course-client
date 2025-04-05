@@ -12,14 +12,14 @@ const Profile = () => {
       return (
             <div>
                   <DashboardTitle role={role} action={"Profile"} />
-                  <div className="mt-10 text-center py-8 px-6 lg:w-[480px] border-2 border-[#ddd] rounded-xl shadow-lg bg-white">
+                  <div className="mt-10 text-center py-8 px-6 lg:w-[480px] border-2 border-[#ededed] rounded-xl shadow-lg bg-white">
 
                         <img
                               src={user?.photoURL}
                               alt="User"
                               className="rounded-full lg:w-56 lg:h-56 border-4 border-[#23b792] mx-auto shadow-md"
                         />
-                        <div className="mt-5 text-[18px] text-gray-800 flex flex-col items-center text-center">
+                        <div className="mt-5 text-[18px] text-gray-800 flex flex-col lg:ml-36">
                               <h1 className="font-medium text-gray-700 text-lg flex items-center gap-2">
                                     <FaUserTie /> {user?.displayName}
                               </h1>
