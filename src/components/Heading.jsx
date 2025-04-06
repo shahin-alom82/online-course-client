@@ -106,7 +106,6 @@ const Heading = () => {
                               ) : (
                                     <button onClick={() => setIsMenuOpen(true)}>
                                           <IoMenuSharp size={30} />
-
                                     </button>
                               )}
                         </div>
@@ -115,7 +114,7 @@ const Heading = () => {
 
                   {/* Mobile Menu */}
                   {isMenuOpen && (
-                        <div className="flex flex-col py-4  items-start gap-5 px-5 border-t-2 border-[#23b792] ">
+                        <div className="flex flex-col py-4 md:hidden block  bg-black/90 text-white  items-start gap-5 px-5 border-t-2 border-[#23b792] ">
                               {nav.map((item, index) => (
                                     <div className="">
                                           <Link
@@ -128,7 +127,7 @@ const Heading = () => {
                                           </Link>
                                     </div>
                               ))}
-                              <hr className="border-gray-700 w-full my-3" />
+                              <hr className="border-gray-500 w-full my-3" />
                               {user ? (
                                     <button
                                           onClick={handleLogout}
