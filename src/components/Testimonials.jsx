@@ -52,7 +52,7 @@ const Testimonials = () => {
                                     <h1 className=''>What Our <span className='text-[#ee4a62]'>Students</span> </h1>
                                     <h1 className='mt-2'>Have To Say</h1>
                               </div>
-                              <p className='text-gray-700 mt-5 tracking-wide'>Our students share their inspiring journeys of growth and success. Discover how our courses have helped them <br /> build skills and confidence!</p>
+                              <p className='text-gray-700 mt-5'>Our students share their inspiring journeys of growth and success. Discover how our courses have helped them <br /> build skills and confidence!</p>
                               <button className='flex items-center gap-2 bg-[#23b792] py-2 px-4 text-white mt-6'>View ALL<FaArrowRightLong /></button>
                         </div>
                         <div className='lg:w-2/3 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-6'>

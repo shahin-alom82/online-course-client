@@ -89,7 +89,7 @@ const CourseDetailsRightSide = ({ course }) => {
                         {/* Enroll Button */}
                         <button
                               onClick={handleEnroll}
-                              className='bg-[#23b792] text-center justify-center py-3 w-full text-lg rounded-full tracking-wide text-white mt-4 font'
+                              className='bg-[#23b792] text-center justify-center py-3 w-full text-lg rounded-full tracking-wide text-white mt-4 lg:font'
                         >
                               Enroll Now
                         </button>
