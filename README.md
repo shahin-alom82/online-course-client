@@ -38,19 +38,16 @@ Each role has distinct features and functionalities tailored to their needs.
 - Ensure MongoDB is running before starting the backend.
 - Frontend is hosted on `http://localhost:3000` and backend on `http://localhost:5000` during development.
 
----
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
 
----
 
 ## 📜 License
 
 This project is licensed under the MIT License.
 
----
 
 ## 💬 Contact
 
