@@ -31,3 +31,30 @@ Each role has distinct features and functionalities tailored to their needs.
 ### User Dashboard
 
 - User Manage (User Home, Payment History, Course Access, User Profile).
+
+
+## 🧑‍💻 Developer Notes
+
+- Ensure MongoDB is running before starting the backend.
+- Frontend is hosted on `http://localhost:3000` and backend on `http://localhost:5000` during development.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 💬 Contact
+
+For any inquiries or support, please 
+- Email: **shahinalom3511371@gmail.com**.
+- Phone: **01682247291**
+
