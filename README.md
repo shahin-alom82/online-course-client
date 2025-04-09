@@ -1,4 +1,6 @@
-# React + Vite
+Full-stack MERN application with user/admin roles and Stripe payment
+integration.
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
