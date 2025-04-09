@@ -11,7 +11,7 @@ Each role has distinct features and functionalities tailored to their needs.
 
 ## 🔗 Live Demo
 
-[Click here to view the live project](#) _https://edublink.vercel.app_
+[Click here to view the live project](#) _(https://edublink.vercel.app)_
 
 ## 🔐 Admin Email and Password
 
