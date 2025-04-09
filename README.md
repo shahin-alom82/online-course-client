@@ -11,7 +11,7 @@ Each role has distinct features and functionalities tailored to their needs.
 
 ## 🔗 Live Demo
 
-[Click here to view the live project](#) _(https://edublink.vercel.app/)_
+[Click here to view the live project](#) _https://edublink.vercel.app_
 
 ## 🔐 Admin Email and Password
 
@@ -36,7 +36,7 @@ Each role has distinct features and functionalities tailored to their needs.
 ## 🧑‍💻 Developer Notes
 
 - Ensure MongoDB is running before starting the backend.
-- Frontend is hosted on `http://localhost:5173/` and backend on `http://localhost:5000` during development.
+- Frontend is hosted on `http://localhost:5173` and backend on `http://localhost:5000` during development.
 
 
 ## 🤝 Contributing
